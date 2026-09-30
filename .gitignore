@@ -6,3 +6,5 @@ playwright-report/
 .playwright-cli/
 .env*
 .DS_Store
+
+*.tsbuildinfo

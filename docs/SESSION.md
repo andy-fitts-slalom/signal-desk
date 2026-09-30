@@ -1,32 +1,49 @@
 # Session handoff — 2026-09-30
 
-## Specification and plan
-Source brief compared byte-for-byte with existing root BRIEF.md; identical. Workspace otherwise empty, no Git repository. Source copied to root as requested.
-1. Planning and repository setup.
-2. Deterministic fictional dataset, domain functions, data dictionary and unit tests.
-3. Vue/Vuetify application shell and charts.
-4. Persistent ownership/status workflow and supporting evidence detail.
-5. Unit/browser/accessibility/responsive verification, publication and deployed checks.
-
-## Decisions
-- Snapshot: 2025-10-21 09:00 America/Los_Angeles (16:00 UTC); 48-hour article window.
-- Region determines matching article membership; each issue counted once. Other filters apply to issues. All scoped cards, queue and charts share one selector.
-- Ownership and status independent; local versioned state only. Reset asks for confirmation.
-- Detail uses a URL query parameter for direct loads, retains filters and queue scroll; desktop side sheet, mobile full screen.
-- GitHub account verified as andy-fitts-slalom using network-enabled gh. Destination repository not found. Initial sandbox auth error was not an actual credential failure.
-
 ## Current state
-Planning complete. Implementation and deployment pending.
 
-## Application structure milestone
-Vue/Vuetify shell, modular ECharts component, TypeScript/Vite configuration and deployment rewrite configured. Initial production build passes. GitHub private repository created and planning pushed. Vercel CLI is logged out; device authentication requested, team selection pending. Production dependency audit reports zero advisories; development tooling advisories will be assessed before handoff.
+Signal Desk is implemented in this workspace and published to the dedicated public GitHub repository at https://github.com/andy-fitts-slalom/signal-desk on `main`. The user will connect Vercel themselves. **No Vercel project was created, linked, or deployed. There is no verified live URL.**
 
-## Dataset milestone
-72 fictional coverage items, 18 issues, 54 original stories, five owners and three brands added with domain types, shared scope selection, immutable transitions, fixed-clock helpers, saved-state validation, and data dictionary. Nine unit tests pass. Baseline: 15 open / 8 unassigned open / 3 overdue open / 72 articles.
+The root brief was compared with the supplied source, found byte-identical, and copied as requested. It remains unchanged. The workspace originally contained only that brief and no Git repository. No other case study, real client data, internal product material, or proprietary code was used.
 
-## Updated publication scope
-User supplied Vercel account/team `andy-protogen`, then explicitly prioritized GitHub publication and will connect Vercel themselves. User authorized public GitHub visibility. Continue to a tested public repository and provide exact Vercel connection instructions; do not claim a verified deployment.
+## Completed implementation
 
-## Core workflow milestone
-Queue, scope filters, four shared-selector cards, ECharts summaries, grouped issue evidence, owner changes, acknowledge/resolve/reopen/undo, activity, versioned local persistence, storage recovery, confirmation reset and query-string direct links implemented. Desktop queue and 390px detail opened and visually checked; browser console has no errors/warnings. Type check, nine unit tests and production build pass. Syndication now has an explicit copy flag and copies cannot precede their original. Removed unneeded Vercel CLI dev dependency; updated Vitest; npm audit now reports zero vulnerabilities.
-Vercel authentication eventually succeeded with team andy-protogen available, but user has taken ownership of connecting/deploying Vercel; no Vercel project created or deployment attempted.
+- Vue 3 + TypeScript + Vite + Vuetify + modular Apache ECharts.
+- 18 fictional issues, 72 coverage articles, 54 original stories (18 syndicated copies), five owners, three brands. JSON fixtures and types live under src/.
+- Queue-first dark layout, four scoped cards, coordinated filters, hourly coverage and brand load charts, text equivalents, empty state, mobile cards and full-width mobile detail.
+- Grouped coverage, transparent editorial severity, owner assignment/change/removal, acknowledgment, resolve/reopen, undo recent status, local activity, confirmation reset.
+- Versioned browser persistence, invalid-state fallback, visible failed-save recovery and retry.
+- URL query state for issue/filter direct loads. Closing detail preserves queue filters/position; keyboard focus returns to its opener.
+- Root README, MIT LICENSE, BRIEF and AGENTS; data dictionary, deployment instructions, verification evidence and desktop screenshot under docs/.
+
+## Domain decisions
+
+- Fixed clock: 2025-10-21 09:00 America/Los_Angeles (16:00 UTC), with 48 hours of prior articles. Activity ordering uses append sequence at the same fixed time.
+- Region selects matching articles first. Each related issue is included once. Brand/severity/status restrict issues; all cards, queue and charts share selectScope.
+- Queue latest coverage and article counts use filtered articles. Detail intentionally shows all issue evidence and marks outside-scope regions.
+- Open means new or acknowledged. Overdue is strictly before the snapshot; exactly at it is Due now. Owner assignment alone changes neither status nor deadline.
+- Prioritize open before resolved, criticality, earliest deadline, stable ID.
+- Original-story IDs are grouping keys; explicit isSyndicated flags identify copies. Copies cannot precede originals.
+- State key: signal-desk:v1. Immutable editorial content is reconstructed from seed when loading saved state. Only valid owners/status and local activity are restored. No backend, notifications or cross-tab synchronization.
+
+## Actual milestones
+
+- `1e3fad0` — specification, plan, root documents and Git initialization.
+- `64852fb` — Vue/Vuetify/ECharts structure; initial production build passed.
+- `0d4815e` — fictional dataset, domain functions, data dictionary and nine unit tests.
+- `c101eac` — responsive queue and persistent core workflow; all preceding milestones pushed.
+- Verification/refinement milestone follows these commits; use `git log -5 --oneline` and docs/VERIFICATION.md for final checks. History records actual work; nothing was backdated.
+
+## Accounts and publication scope
+
+GitHub authentication initially appeared broken in the sandbox, but network-enabled verification succeeded as **andy-fitts-slalom** with repository access. The destination did not exist, so it was created private. User subsequently authorized public visibility, which was applied.
+
+Vercel initially had no credentials; device login later succeeded and listed **Andy-Protogen** (`andy-protogen`). User then explicitly chose to connect the Vercel project to GitHub themselves and asked us to take the local/GitHub project as far as possible. The unused Vercel CLI dependency was removed. See docs/DEPLOYMENT.md for exact remaining steps and live acceptance checks.
+
+## Verification and continuation
+
+Use `npm ci`, `npm run check`, `npm test`, `npm run build`, and `npm run test:e2e`. Browser tests launch their own production preview on strict port **4371**, refusing to reuse an existing process. Port 4173 was occupied by an unrelated app; do not stop or reuse it. Browser binaries: `npx playwright install chromium`.
+
+Read docs/VERIFICATION.md for final results. The verification workflow runs on main pushes and pull requests. Browser tests can target an actual deployment with `PLAYWRIGHT_BASE_URL=https://ACTUAL-URL npm run test:e2e`.
+
+Remaining publication action: the user imports this repository into Vercel under `andy-protogen`, creates a separate `signal-desk` project (inspect any existing project before reuse), deploys `main`, then the actual production URL must be opened and checked for triage, persistence, direct issue loads/refreshes and phone layout. Add the real URL and verified commit to README and verification notes only after doing so.
