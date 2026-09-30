@@ -17,7 +17,7 @@ Baseline summary: 15 open issues, 8 unassigned open issues, 3 overdue open issue
 | `brands.json` | Fictional brand names: Luma Stream, Folio Press, Echo Live. |
 | `owners.json` | `id`: stable owner key; `name`: fictional response lead; `team`: response team. |
 | `issues.json` | `id`: stable grouping key; `title`; `brand`; `topic`; `severity`: critical/high/normal; `severityReason`: transparent editorial explanation; `status`: new/acknowledged/resolved; `ownerId`: owner reference or null; `deadline`: UTC ISO response deadline. |
-| `articles.json` | `id`: stable article key; `issueId`: parent issue; `headline`; `excerpt`; `outlet`: fictional outlet; `publishedAt`: UTC ISO timestamp; `region`: North America/Europe/Asia Pacific; `channel`; `originalStoryId`: shared by original and syndicated copies. |
+| `articles.json` | `id`: stable article key; `issueId`: parent issue; `headline`; `excerpt`; `outlet`: fictional outlet; `publishedAt`: UTC ISO timestamp; `region`: North America/Europe/Asia Pacific; `channel`; `originalStoryId`: story grouping key shared by original and syndicated copies (not an article ID); `isSyndicated`: true only for a syndicated copy. Each copy is published ten minutes after its original. |
 
 ## Scope and state
 

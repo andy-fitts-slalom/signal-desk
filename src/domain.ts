@@ -6,7 +6,7 @@ import brandData from './data/brands.json'
 export type Severity = 'critical' | 'high' | 'normal'
 export type Status = 'new' | 'acknowledged' | 'resolved'
 export interface Issue { id: string; title: string; brand: string; topic: string; severity: Severity; status: Status; ownerId: string | null; deadline: string; severityReason: string }
-export interface Article { id: string; issueId: string; headline: string; excerpt: string; outlet: string; publishedAt: string; region: string; channel: string; originalStoryId: string }
+export interface Article { id: string; issueId: string; headline: string; excerpt: string; outlet: string; publishedAt: string; region: string; channel: string; originalStoryId: string; isSyndicated: boolean }
 export interface Owner { id: string; name: string; team: string }
 export interface Activity { id: string; issueId: string; kind: 'assignment' | 'status'; at: string; message: string }
 export interface DemoState { version: 1; issues: Issue[]; activity: Activity[] }

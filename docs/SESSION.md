@@ -26,3 +26,7 @@ Vue/Vuetify shell, modular ECharts component, TypeScript/Vite configuration and 
 
 ## Updated publication scope
 User supplied Vercel account/team `andy-protogen`, then explicitly prioritized GitHub publication and will connect Vercel themselves. User authorized public GitHub visibility. Continue to a tested public repository and provide exact Vercel connection instructions; do not claim a verified deployment.
+
+## Core workflow milestone
+Queue, scope filters, four shared-selector cards, ECharts summaries, grouped issue evidence, owner changes, acknowledge/resolve/reopen/undo, activity, versioned local persistence, storage recovery, confirmation reset and query-string direct links implemented. Desktop queue and 390px detail opened and visually checked; browser console has no errors/warnings. Type check, nine unit tests and production build pass. Syndication now has an explicit copy flag and copies cannot precede their original. Removed unneeded Vercel CLI dev dependency; updated Vitest; npm audit now reports zero vulnerabilities.
+Vercel authentication eventually succeeded with team andy-protogen available, but user has taken ownership of connecting/deploying Vercel; no Vercel project created or deployment attempted.

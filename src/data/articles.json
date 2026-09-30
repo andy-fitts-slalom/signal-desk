@@ -5,10 +5,11 @@
     "headline": "Offline viewing questions grow after plan update",
     "excerpt": "Morning Lantern covers subscription feature claims spread. The original report sets out the questions that prompted this issue.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-21T15:45:00.000Z",
+    "publishedAt": "2025-10-21T15:35:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-01-1"
+    "originalStoryId": "story-01-1",
+    "isSyndicated": false
   },
   {
     "id": "article-002",
@@ -16,10 +17,11 @@
     "headline": "Offline viewing questions grow after plan update \u2014 regional roundup",
     "excerpt": "The Civic Dispatch covers subscription feature claims spread. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-21T09:04:00.000Z",
+    "publishedAt": "2025-10-21T15:45:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-01-1"
+    "originalStoryId": "story-01-1",
+    "isSyndicated": true
   },
   {
     "id": "article-003",
@@ -30,7 +32,8 @@
     "publishedAt": "2025-10-21T02:23:00.000Z",
     "region": "Asia Pacific",
     "channel": "Podcast",
-    "originalStoryId": "story-01-2"
+    "originalStoryId": "story-01-2",
+    "isSyndicated": false
   },
   {
     "id": "article-004",
@@ -41,7 +44,8 @@
     "publishedAt": "2025-10-20T19:42:00.000Z",
     "region": "North America",
     "channel": "Social",
-    "originalStoryId": "story-01-3"
+    "originalStoryId": "story-01-3",
+    "isSyndicated": false
   },
   {
     "id": "article-005",
@@ -49,10 +53,11 @@
     "headline": "Harbor festival gates time differs across listings",
     "excerpt": "The Civic Dispatch covers harbor festival entry time changes. The original report sets out the questions that prompted this issue.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-21T14:48:00.000Z",
+    "publishedAt": "2025-10-21T14:38:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-02-1"
+    "originalStoryId": "story-02-1",
+    "isSyndicated": false
   },
   {
     "id": "article-006",
@@ -60,10 +65,11 @@
     "headline": "Harbor festival gates time differs across listings \u2014 regional roundup",
     "excerpt": "Signal & Story covers harbor festival entry time changes. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-21T08:07:00.000Z",
+    "publishedAt": "2025-10-21T14:48:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-02-1"
+    "originalStoryId": "story-02-1",
+    "isSyndicated": true
   },
   {
     "id": "article-007",
@@ -74,7 +80,8 @@
     "publishedAt": "2025-10-21T01:26:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-02-2"
+    "originalStoryId": "story-02-2",
+    "isSyndicated": false
   },
   {
     "id": "article-008",
@@ -85,7 +92,8 @@
     "publishedAt": "2025-10-20T18:45:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-02-3"
+    "originalStoryId": "story-02-3",
+    "isSyndicated": false
   },
   {
     "id": "article-009",
@@ -93,10 +101,11 @@
     "headline": "Luma Stream previews its autumn story slate",
     "excerpt": "Signal & Story covers new season announcement builds interest. The original report sets out the questions that prompted this issue.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-21T13:51:00.000Z",
+    "publishedAt": "2025-10-21T13:41:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-03-1"
+    "originalStoryId": "story-03-1",
+    "isSyndicated": false
   },
   {
     "id": "article-010",
@@ -104,10 +113,11 @@
     "headline": "Luma Stream previews its autumn story slate \u2014 regional roundup",
     "excerpt": "Harbor Chronicle covers new season announcement builds interest. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-21T07:10:00.000Z",
+    "publishedAt": "2025-10-21T13:51:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-03-1"
+    "originalStoryId": "story-03-1",
+    "isSyndicated": true
   },
   {
     "id": "article-011",
@@ -118,7 +128,8 @@
     "publishedAt": "2025-10-21T00:29:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-03-2"
+    "originalStoryId": "story-03-2",
+    "isSyndicated": false
   },
   {
     "id": "article-012",
@@ -129,7 +140,8 @@
     "publishedAt": "2025-10-20T17:48:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-03-3"
+    "originalStoryId": "story-03-3",
+    "isSyndicated": false
   },
   {
     "id": "article-013",
@@ -137,10 +149,11 @@
     "headline": "Folio readers ask when the next edition arrives",
     "excerpt": "Harbor Chronicle covers print edition delivery window questioned. The original report sets out the questions that prompted this issue.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-21T12:54:00.000Z",
+    "publishedAt": "2025-10-21T12:44:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-04-1"
+    "originalStoryId": "story-04-1",
+    "isSyndicated": false
   },
   {
     "id": "article-014",
@@ -148,10 +161,11 @@
     "headline": "Folio readers ask when the next edition arrives \u2014 regional roundup",
     "excerpt": "Culture Current covers print edition delivery window questioned. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-21T06:13:00.000Z",
+    "publishedAt": "2025-10-21T12:54:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-04-1"
+    "originalStoryId": "story-04-1",
+    "isSyndicated": true
   },
   {
     "id": "article-015",
@@ -162,7 +176,8 @@
     "publishedAt": "2025-10-20T23:32:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-04-2"
+    "originalStoryId": "story-04-2",
+    "isSyndicated": false
   },
   {
     "id": "article-016",
@@ -173,7 +188,8 @@
     "publishedAt": "2025-10-20T16:51:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-04-3"
+    "originalStoryId": "story-04-3",
+    "isSyndicated": false
   },
   {
     "id": "article-017",
@@ -181,10 +197,11 @@
     "headline": "Podcast tour listings prompt access questions",
     "excerpt": "Culture Current covers podcast tour accessibility information. The original report sets out the questions that prompted this issue.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-21T11:57:00.000Z",
+    "publishedAt": "2025-10-21T11:47:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-05-1"
+    "originalStoryId": "story-05-1",
+    "isSyndicated": false
   },
   {
     "id": "article-018",
@@ -192,10 +209,11 @@
     "headline": "Podcast tour listings prompt access questions \u2014 regional roundup",
     "excerpt": "Evening Ledger covers podcast tour accessibility information. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-21T05:16:00.000Z",
+    "publishedAt": "2025-10-21T11:57:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-05-1"
+    "originalStoryId": "story-05-1",
+    "isSyndicated": true
   },
   {
     "id": "article-019",
@@ -206,7 +224,8 @@
     "publishedAt": "2025-10-20T22:35:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-05-2"
+    "originalStoryId": "story-05-2",
+    "isSyndicated": false
   },
   {
     "id": "article-020",
@@ -217,7 +236,8 @@
     "publishedAt": "2025-10-20T15:54:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-05-3"
+    "originalStoryId": "story-05-3",
+    "isSyndicated": false
   },
   {
     "id": "article-021",
@@ -225,10 +245,11 @@
     "headline": "Family profile guide sparks follow-up questions",
     "excerpt": "Evening Ledger covers family profile controls need clarity. The original report sets out the questions that prompted this issue.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-21T11:00:00.000Z",
+    "publishedAt": "2025-10-21T10:50:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-06-1"
+    "originalStoryId": "story-06-1",
+    "isSyndicated": false
   },
   {
     "id": "article-022",
@@ -236,10 +257,11 @@
     "headline": "Family profile guide sparks follow-up questions \u2014 regional roundup",
     "excerpt": "Morning Lantern covers family profile controls need clarity. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-21T04:19:00.000Z",
+    "publishedAt": "2025-10-21T11:00:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-06-1"
+    "originalStoryId": "story-06-1",
+    "isSyndicated": true
   },
   {
     "id": "article-023",
@@ -250,7 +272,8 @@
     "publishedAt": "2025-10-20T21:38:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-06-2"
+    "originalStoryId": "story-06-2",
+    "isSyndicated": false
   },
   {
     "id": "article-024",
@@ -261,7 +284,8 @@
     "publishedAt": "2025-10-20T14:57:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-06-3"
+    "originalStoryId": "story-06-3",
+    "isSyndicated": false
   },
   {
     "id": "article-025",
@@ -269,10 +293,11 @@
     "headline": "Folio introduces the Weekend Atlas collection",
     "excerpt": "Morning Lantern covers folio weekend collection launches. The original report sets out the questions that prompted this issue.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-21T10:03:00.000Z",
+    "publishedAt": "2025-10-21T09:53:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-07-1"
+    "originalStoryId": "story-07-1",
+    "isSyndicated": false
   },
   {
     "id": "article-026",
@@ -280,10 +305,11 @@
     "headline": "Folio introduces the Weekend Atlas collection \u2014 regional roundup",
     "excerpt": "The Civic Dispatch covers folio weekend collection launches. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-21T03:22:00.000Z",
+    "publishedAt": "2025-10-21T10:03:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-07-1"
+    "originalStoryId": "story-07-1",
+    "isSyndicated": true
   },
   {
     "id": "article-027",
@@ -294,7 +320,8 @@
     "publishedAt": "2025-10-20T20:41:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-07-2"
+    "originalStoryId": "story-07-2",
+    "isSyndicated": false
   },
   {
     "id": "article-028",
@@ -305,7 +332,8 @@
     "publishedAt": "2025-10-20T14:00:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-07-3"
+    "originalStoryId": "story-07-3",
+    "isSyndicated": false
   },
   {
     "id": "article-029",
@@ -313,10 +341,11 @@
     "headline": "Echo shares an updated stage running order",
     "excerpt": "The Civic Dispatch covers echo stage running order confirmed. The original report sets out the questions that prompted this issue.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-21T09:06:00.000Z",
+    "publishedAt": "2025-10-21T08:56:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-08-1"
+    "originalStoryId": "story-08-1",
+    "isSyndicated": false
   },
   {
     "id": "article-030",
@@ -324,10 +353,11 @@
     "headline": "Echo shares an updated stage running order \u2014 regional roundup",
     "excerpt": "Signal & Story covers echo stage running order confirmed. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-21T02:25:00.000Z",
+    "publishedAt": "2025-10-21T09:06:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-08-1"
+    "originalStoryId": "story-08-1",
+    "isSyndicated": true
   },
   {
     "id": "article-031",
@@ -338,7 +368,8 @@
     "publishedAt": "2025-10-20T19:44:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-08-2"
+    "originalStoryId": "story-08-2",
+    "isSyndicated": false
   },
   {
     "id": "article-032",
@@ -349,7 +380,8 @@
     "publishedAt": "2025-10-20T13:03:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-08-3"
+    "originalStoryId": "story-08-3",
+    "isSyndicated": false
   },
   {
     "id": "article-033",
@@ -357,10 +389,11 @@
     "headline": "Release previews differ on audio description timing",
     "excerpt": "Signal & Story covers audio description release timing. The original report sets out the questions that prompted this issue.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-21T08:09:00.000Z",
+    "publishedAt": "2025-10-21T07:59:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-09-1"
+    "originalStoryId": "story-09-1",
+    "isSyndicated": false
   },
   {
     "id": "article-034",
@@ -368,10 +401,11 @@
     "headline": "Release previews differ on audio description timing \u2014 regional roundup",
     "excerpt": "Harbor Chronicle covers audio description release timing. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-21T01:28:00.000Z",
+    "publishedAt": "2025-10-21T08:09:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-09-1"
+    "originalStoryId": "story-09-1",
+    "isSyndicated": true
   },
   {
     "id": "article-035",
@@ -382,7 +416,8 @@
     "publishedAt": "2025-10-20T18:47:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-09-2"
+    "originalStoryId": "story-09-2",
+    "isSyndicated": false
   },
   {
     "id": "article-036",
@@ -393,7 +428,8 @@
     "publishedAt": "2025-10-20T12:06:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-09-3"
+    "originalStoryId": "story-09-3",
+    "isSyndicated": false
   },
   {
     "id": "article-037",
@@ -401,10 +437,11 @@
     "headline": "Archive guide answers Folio access questions",
     "excerpt": "Harbor Chronicle covers publication archive access explained. The original report sets out the questions that prompted this issue.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-21T07:12:00.000Z",
+    "publishedAt": "2025-10-21T07:02:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-10-1"
+    "originalStoryId": "story-10-1",
+    "isSyndicated": false
   },
   {
     "id": "article-038",
@@ -412,10 +449,11 @@
     "headline": "Archive guide answers Folio access questions \u2014 regional roundup",
     "excerpt": "Culture Current covers publication archive access explained. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-21T00:31:00.000Z",
+    "publishedAt": "2025-10-21T07:12:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-10-1"
+    "originalStoryId": "story-10-1",
+    "isSyndicated": true
   },
   {
     "id": "article-039",
@@ -426,7 +464,8 @@
     "publishedAt": "2025-10-20T17:50:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-10-2"
+    "originalStoryId": "story-10-2",
+    "isSyndicated": false
   },
   {
     "id": "article-040",
@@ -437,7 +476,8 @@
     "publishedAt": "2025-10-20T11:09:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-10-3"
+    "originalStoryId": "story-10-3",
+    "isSyndicated": false
   },
   {
     "id": "article-041",
@@ -445,10 +485,11 @@
     "headline": "Regional showcase moves to Lantern Hall",
     "excerpt": "Culture Current covers regional showcase venue change. The original report sets out the questions that prompted this issue.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-21T06:15:00.000Z",
+    "publishedAt": "2025-10-21T06:05:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-11-1"
+    "originalStoryId": "story-11-1",
+    "isSyndicated": false
   },
   {
     "id": "article-042",
@@ -456,10 +497,11 @@
     "headline": "Regional showcase moves to Lantern Hall \u2014 regional roundup",
     "excerpt": "Evening Ledger covers regional showcase venue change. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-20T23:34:00.000Z",
+    "publishedAt": "2025-10-21T06:15:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-11-1"
+    "originalStoryId": "story-11-1",
+    "isSyndicated": true
   },
   {
     "id": "article-043",
@@ -470,7 +512,8 @@
     "publishedAt": "2025-10-20T16:53:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-11-2"
+    "originalStoryId": "story-11-2",
+    "isSyndicated": false
   },
   {
     "id": "article-044",
@@ -481,7 +524,8 @@
     "publishedAt": "2025-10-20T10:12:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-11-3"
+    "originalStoryId": "story-11-3",
+    "isSyndicated": false
   },
   {
     "id": "article-045",
@@ -489,10 +533,11 @@
     "headline": "Creators discuss the upcoming Luma anthology",
     "excerpt": "Evening Ledger covers creator interview preview coverage. The original report sets out the questions that prompted this issue.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-21T05:18:00.000Z",
+    "publishedAt": "2025-10-21T05:08:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-12-1"
+    "originalStoryId": "story-12-1",
+    "isSyndicated": false
   },
   {
     "id": "article-046",
@@ -500,10 +545,11 @@
     "headline": "Creators discuss the upcoming Luma anthology \u2014 regional roundup",
     "excerpt": "Morning Lantern covers creator interview preview coverage. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-20T22:37:00.000Z",
+    "publishedAt": "2025-10-21T05:18:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-12-1"
+    "originalStoryId": "story-12-1",
+    "isSyndicated": true
   },
   {
     "id": "article-047",
@@ -514,7 +560,8 @@
     "publishedAt": "2025-10-20T15:56:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-12-2"
+    "originalStoryId": "story-12-2",
+    "isSyndicated": false
   },
   {
     "id": "article-048",
@@ -525,7 +572,8 @@
     "publishedAt": "2025-10-20T09:15:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-12-3"
+    "originalStoryId": "story-12-3",
+    "isSyndicated": false
   },
   {
     "id": "article-049",
@@ -533,10 +581,11 @@
     "headline": "Folio correction note prompts differing interpretations",
     "excerpt": "Morning Lantern covers edition correction note interpretation. The original report sets out the questions that prompted this issue.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-21T04:21:00.000Z",
+    "publishedAt": "2025-10-21T04:11:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-13-1"
+    "originalStoryId": "story-13-1",
+    "isSyndicated": false
   },
   {
     "id": "article-050",
@@ -544,10 +593,11 @@
     "headline": "Folio correction note prompts differing interpretations \u2014 regional roundup",
     "excerpt": "The Civic Dispatch covers edition correction note interpretation. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-20T21:40:00.000Z",
+    "publishedAt": "2025-10-21T04:21:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-13-1"
+    "originalStoryId": "story-13-1",
+    "isSyndicated": true
   },
   {
     "id": "article-051",
@@ -558,7 +608,8 @@
     "publishedAt": "2025-10-20T14:59:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-13-2"
+    "originalStoryId": "story-13-2",
+    "isSyndicated": false
   },
   {
     "id": "article-052",
@@ -569,7 +620,8 @@
     "publishedAt": "2025-10-20T08:18:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-13-3"
+    "originalStoryId": "story-13-3",
+    "isSyndicated": false
   },
   {
     "id": "article-053",
@@ -577,10 +629,11 @@
     "headline": "Audience guide explains live recording etiquette",
     "excerpt": "The Civic Dispatch covers live recording audience policy. The original report sets out the questions that prompted this issue.",
     "outlet": "The Civic Dispatch",
-    "publishedAt": "2025-10-21T03:24:00.000Z",
+    "publishedAt": "2025-10-21T03:14:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-14-1"
+    "originalStoryId": "story-14-1",
+    "isSyndicated": false
   },
   {
     "id": "article-054",
@@ -588,10 +641,11 @@
     "headline": "Audience guide explains live recording etiquette \u2014 regional roundup",
     "excerpt": "Signal & Story covers live recording audience policy. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-20T20:43:00.000Z",
+    "publishedAt": "2025-10-21T03:24:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-14-1"
+    "originalStoryId": "story-14-1",
+    "isSyndicated": true
   },
   {
     "id": "article-055",
@@ -602,7 +656,8 @@
     "publishedAt": "2025-10-20T14:02:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-14-2"
+    "originalStoryId": "story-14-2",
+    "isSyndicated": false
   },
   {
     "id": "article-056",
@@ -613,7 +668,8 @@
     "publishedAt": "2025-10-20T07:21:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-14-3"
+    "originalStoryId": "story-14-3",
+    "isSyndicated": false
   },
   {
     "id": "article-057",
@@ -621,10 +677,11 @@
     "headline": "Luma premiere guide confirms regional times",
     "excerpt": "Signal & Story covers stream premiere time confirmed. The original report sets out the questions that prompted this issue.",
     "outlet": "Signal & Story",
-    "publishedAt": "2025-10-21T02:27:00.000Z",
+    "publishedAt": "2025-10-21T02:17:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-15-1"
+    "originalStoryId": "story-15-1",
+    "isSyndicated": false
   },
   {
     "id": "article-058",
@@ -632,10 +689,11 @@
     "headline": "Luma premiere guide confirms regional times \u2014 regional roundup",
     "excerpt": "Harbor Chronicle covers stream premiere time confirmed. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-20T19:46:00.000Z",
+    "publishedAt": "2025-10-21T02:27:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-15-1"
+    "originalStoryId": "story-15-1",
+    "isSyndicated": true
   },
   {
     "id": "article-059",
@@ -646,7 +704,8 @@
     "publishedAt": "2025-10-20T13:05:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-15-2"
+    "originalStoryId": "story-15-2",
+    "isSyndicated": false
   },
   {
     "id": "article-060",
@@ -657,7 +716,8 @@
     "publishedAt": "2025-10-20T06:24:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-15-3"
+    "originalStoryId": "story-15-3",
+    "isSyndicated": false
   },
   {
     "id": "article-061",
@@ -665,10 +725,11 @@
     "headline": "Folio introduces a new contributor conversation series",
     "excerpt": "Harbor Chronicle covers folio contributor series announced. The original report sets out the questions that prompted this issue.",
     "outlet": "Harbor Chronicle",
-    "publishedAt": "2025-10-21T01:30:00.000Z",
+    "publishedAt": "2025-10-21T01:20:00.000Z",
     "region": "North America",
     "channel": "Online news",
-    "originalStoryId": "story-16-1"
+    "originalStoryId": "story-16-1",
+    "isSyndicated": false
   },
   {
     "id": "article-062",
@@ -676,10 +737,11 @@
     "headline": "Folio introduces a new contributor conversation series \u2014 regional roundup",
     "excerpt": "Culture Current covers folio contributor series announced. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-20T18:49:00.000Z",
+    "publishedAt": "2025-10-21T01:30:00.000Z",
     "region": "Europe",
     "channel": "Newsletter",
-    "originalStoryId": "story-16-1"
+    "originalStoryId": "story-16-1",
+    "isSyndicated": true
   },
   {
     "id": "article-063",
@@ -690,7 +752,8 @@
     "publishedAt": "2025-10-20T12:08:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-16-2"
+    "originalStoryId": "story-16-2",
+    "isSyndicated": false
   },
   {
     "id": "article-064",
@@ -701,7 +764,8 @@
     "publishedAt": "2025-10-20T05:27:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-16-3"
+    "originalStoryId": "story-16-3",
+    "isSyndicated": false
   },
   {
     "id": "article-065",
@@ -709,10 +773,11 @@
     "headline": "Ticket exchange guide raises follow-up questions",
     "excerpt": "Culture Current covers ticket exchange terms misunderstood. The original report sets out the questions that prompted this issue.",
     "outlet": "Culture Current",
-    "publishedAt": "2025-10-21T00:33:00.000Z",
+    "publishedAt": "2025-10-21T00:23:00.000Z",
     "region": "Europe",
     "channel": "Online news",
-    "originalStoryId": "story-17-1"
+    "originalStoryId": "story-17-1",
+    "isSyndicated": false
   },
   {
     "id": "article-066",
@@ -720,10 +785,11 @@
     "headline": "Ticket exchange guide raises follow-up questions \u2014 regional roundup",
     "excerpt": "Evening Ledger covers ticket exchange terms misunderstood. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-20T17:52:00.000Z",
+    "publishedAt": "2025-10-21T00:33:00.000Z",
     "region": "Asia Pacific",
     "channel": "Newsletter",
-    "originalStoryId": "story-17-1"
+    "originalStoryId": "story-17-1",
+    "isSyndicated": true
   },
   {
     "id": "article-067",
@@ -734,7 +800,8 @@
     "publishedAt": "2025-10-20T11:11:00.000Z",
     "region": "North America",
     "channel": "Podcast",
-    "originalStoryId": "story-17-2"
+    "originalStoryId": "story-17-2",
+    "isSyndicated": false
   },
   {
     "id": "article-068",
@@ -745,7 +812,8 @@
     "publishedAt": "2025-10-20T04:30:00.000Z",
     "region": "Europe",
     "channel": "Social",
-    "originalStoryId": "story-17-3"
+    "originalStoryId": "story-17-3",
+    "isSyndicated": false
   },
   {
     "id": "article-069",
@@ -753,10 +821,11 @@
     "headline": "Echo previews a listening companion experience",
     "excerpt": "Evening Ledger covers listening companion app preview. The original report sets out the questions that prompted this issue.",
     "outlet": "Evening Ledger",
-    "publishedAt": "2025-10-20T23:36:00.000Z",
+    "publishedAt": "2025-10-20T23:26:00.000Z",
     "region": "Asia Pacific",
     "channel": "Online news",
-    "originalStoryId": "story-18-1"
+    "originalStoryId": "story-18-1",
+    "isSyndicated": false
   },
   {
     "id": "article-070",
@@ -764,10 +833,11 @@
     "headline": "Echo previews a listening companion experience \u2014 regional roundup",
     "excerpt": "Morning Lantern covers listening companion app preview. This syndicated copy repeats the original report, with a regional introduction.",
     "outlet": "Morning Lantern",
-    "publishedAt": "2025-10-20T16:55:00.000Z",
+    "publishedAt": "2025-10-20T23:36:00.000Z",
     "region": "North America",
     "channel": "Newsletter",
-    "originalStoryId": "story-18-1"
+    "originalStoryId": "story-18-1",
+    "isSyndicated": true
   },
   {
     "id": "article-071",
@@ -778,7 +848,8 @@
     "publishedAt": "2025-10-20T10:14:00.000Z",
     "region": "Europe",
     "channel": "Podcast",
-    "originalStoryId": "story-18-2"
+    "originalStoryId": "story-18-2",
+    "isSyndicated": false
   },
   {
     "id": "article-072",
@@ -789,6 +860,7 @@
     "publishedAt": "2025-10-20T03:33:00.000Z",
     "region": "Asia Pacific",
     "channel": "Social",
-    "originalStoryId": "story-18-3"
+    "originalStoryId": "story-18-3",
+    "isSyndicated": false
   }
 ]

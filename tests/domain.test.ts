@@ -9,6 +9,13 @@ describe('fictional deterministic dataset', () => {
     expect(brands).toHaveLength(3)
     expect(new Set(articles.map(a => a.id)).size).toBe(72)
     expect(new Set(articles.map(a => a.originalStoryId)).size).toBe(54)
+    expect(articles.filter(a => a.isSyndicated)).toHaveLength(18)
+    for (const copy of articles.filter(a => a.isSyndicated)) {
+      const originals = articles.filter(a => a.originalStoryId === copy.originalStoryId && !a.isSyndicated)
+      expect(originals).toHaveLength(1)
+      expect(Date.parse(copy.publishedAt)).toBeGreaterThanOrEqual(Date.parse(originals[0]!.publishedAt))
+    }
+    expect(Math.max(...articles.filter(a => a.issueId === 'issue-01').map(a => Date.parse(a.publishedAt)))).toBe(Date.parse(SNAPSHOT) - 15 * 60000)
     for (const article of articles) {
       expect(seedIssues.some(i => i.id === article.issueId)).toBe(true)
       expect(Date.parse(article.publishedAt)).toBeGreaterThanOrEqual(Date.parse(WINDOW_START))
