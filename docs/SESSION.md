@@ -17,3 +17,6 @@ Source brief compared byte-for-byte with existing root BRIEF.md; identical. Work
 
 ## Current state
 Planning complete. Implementation and deployment pending.
+
+## Application structure milestone
+Vue/Vuetify shell, modular ECharts component, TypeScript/Vite configuration and deployment rewrite configured. Initial production build passes. GitHub private repository created and planning pushed. Vercel CLI is logged out; device authentication requested, team selection pending. Production dependency audit reports zero advisories; development tooling advisories will be assessed before handoff.
