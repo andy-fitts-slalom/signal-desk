@@ -24,6 +24,10 @@
 
 Verification found and fixed resolved-row contrast and missing dialog focus return; the final suite confirms both repairs. Port 4173 was occupied by another app during initial setup and was not reused or stopped.
 
+## GitHub verification
+
+[Verification run 36780573546](https://github.com/andy-fitts-slalom/signal-desk/actions/runs/36780573546) passed on pushed commit `46090a1`, including clean install, type checks, unit tests, production build and browser tests on Linux. Its deprecation notice prompted an update to official current GitHub Action releases; the final refinement commit also fixes chart date-label wrapping. The final commit's run can be found in the repository Actions tab.
+
 ## External publication
 
 The dedicated GitHub repository was created private, then changed to public on explicit user authorization. Descriptive planning, application structure, dataset and core workflow commits were pushed when those milestones were completed.

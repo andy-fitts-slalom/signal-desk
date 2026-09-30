@@ -32,7 +32,8 @@ The root brief was compared with the supplied source, found byte-identical, and 
 - `64852fb` — Vue/Vuetify/ECharts structure; initial production build passed.
 - `0d4815e` — fictional dataset, domain functions, data dictionary and nine unit tests.
 - `c101eac` — responsive queue and persistent core workflow; all preceding milestones pushed.
-- Verification/refinement milestone follows these commits; use `git log -5 --oneline` and docs/VERIFICATION.md for final checks. History records actual work; nothing was backdated.
+- `46090a1` — production browser suite, accessibility/focus fixes, CI, documentation and final verification; GitHub CI passed.
+- Final refinement records CI evidence, updates deprecated action runtimes and wraps chart dates without overlap; use `git log -5 --oneline` and docs/VERIFICATION.md for final checks. History records actual work; nothing was backdated.
 
 ## Accounts and publication scope
 

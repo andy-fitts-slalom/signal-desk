@@ -26,7 +26,12 @@ function draw() {
       animation: false,
       backgroundColor: 'transparent',
       textStyle: { fontFamily: 'system-ui' },
-      grid: { left: 30, right: 12, top: 12, bottom: 26 },
+      grid: {
+        left: 30,
+        right: 12,
+        top: 12,
+        bottom: props.kind === 'line' ? 38 : 26,
+      },
       tooltip: {
         trigger: 'axis',
         backgroundColor: '#222a35',
@@ -42,6 +47,9 @@ function draw() {
           color: '#aab6c8',
           fontSize: 10,
           interval: props.kind === 'bar' ? 0 : 11,
+          hideOverlap: true,
+          formatter: (value: string) =>
+            props.kind === 'line' ? value.replace(', ', '\n') : value,
         },
       },
       yAxis: {
