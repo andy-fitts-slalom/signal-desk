@@ -1,0 +1,200 @@
+[
+  {
+    "id": "issue-01",
+    "title": "Subscription feature claims spread",
+    "brand": "Luma Stream",
+    "topic": "Subscription features",
+    "severity": "critical",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-21T14:30:00.000Z",
+    "severityReason": "Several outlets report that offline viewing has been removed. Conflicting plan descriptions require a prompt, coordinated correction."
+  },
+  {
+    "id": "issue-02",
+    "title": "Harbor festival entry time changes",
+    "brand": "Echo Live",
+    "topic": "Event schedule",
+    "severity": "critical",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-21T15:25:00.000Z",
+    "severityReason": "Published arrival times conflict with the revised venue schedule. Attendees need a consistent entry-time clarification."
+  },
+  {
+    "id": "issue-03",
+    "title": "New season announcement builds interest",
+    "brand": "Luma Stream",
+    "topic": "Programming",
+    "severity": "normal",
+    "status": "acknowledged",
+    "ownerId": "owner-02",
+    "deadline": "2025-10-22T07:00:00.000Z",
+    "severityReason": "Routine coverage of the autumn programming slate; monitor for questions without an urgent response."
+  },
+  {
+    "id": "issue-04",
+    "title": "Print edition delivery window questioned",
+    "brand": "Folio Press",
+    "topic": "Distribution",
+    "severity": "high",
+    "status": "acknowledged",
+    "ownerId": "owner-03",
+    "deadline": "2025-10-21T16:25:00.000Z",
+    "severityReason": "Regional coverage cites an unclear delivery window. An assigned response is approaching its editorial deadline."
+  },
+  {
+    "id": "issue-05",
+    "title": "Podcast tour accessibility information",
+    "brand": "Echo Live",
+    "topic": "Accessibility",
+    "severity": "high",
+    "status": "new",
+    "ownerId": "owner-04",
+    "deadline": "2025-10-21T16:45:00.000Z",
+    "severityReason": "Venue information is inconsistent across listings. The team should clarify available access arrangements before ticket decisions."
+  },
+  {
+    "id": "issue-06",
+    "title": "Family profile controls need clarity",
+    "brand": "Luma Stream",
+    "topic": "Product guidance",
+    "severity": "high",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-21T17:20:00.000Z",
+    "severityReason": "Multiple reports conflate profile controls and content ratings. A clear explanation can address the confusion."
+  },
+  {
+    "id": "issue-07",
+    "title": "Folio weekend collection launches",
+    "brand": "Folio Press",
+    "topic": "Programming",
+    "severity": "normal",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-22T14:00:00.000Z",
+    "severityReason": "Expected launch coverage presents no material conflict; routine monitoring is sufficient."
+  },
+  {
+    "id": "issue-08",
+    "title": "Echo stage running order confirmed",
+    "brand": "Echo Live",
+    "topic": "Event schedule",
+    "severity": "normal",
+    "status": "resolved",
+    "ownerId": "owner-04",
+    "deadline": "2025-10-21T13:00:00.000Z",
+    "severityReason": "The revised running order has been reviewed in this demo. No further response is currently needed."
+  },
+  {
+    "id": "issue-09",
+    "title": "Audio description release timing",
+    "brand": "Luma Stream",
+    "topic": "Accessibility",
+    "severity": "high",
+    "status": "acknowledged",
+    "ownerId": "owner-02",
+    "deadline": "2025-10-21T15:45:00.000Z",
+    "severityReason": "Release coverage includes inconsistent timing for audio description. An owned clarification is now overdue."
+  },
+  {
+    "id": "issue-10",
+    "title": "Publication archive access explained",
+    "brand": "Folio Press",
+    "topic": "Subscription features",
+    "severity": "normal",
+    "status": "resolved",
+    "ownerId": "owner-03",
+    "deadline": "2025-10-21T12:00:00.000Z",
+    "severityReason": "Coverage now reflects the clarified archive guide; this issue is closed in the demonstration."
+  },
+  {
+    "id": "issue-11",
+    "title": "Regional showcase venue change",
+    "brand": "Echo Live",
+    "topic": "Event schedule",
+    "severity": "high",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-21T18:00:00.000Z",
+    "severityReason": "The changed venue is absent from several event roundups. A regional correction is needed before travel planning."
+  },
+  {
+    "id": "issue-12",
+    "title": "Creator interview preview coverage",
+    "brand": "Luma Stream",
+    "topic": "Programming",
+    "severity": "normal",
+    "status": "acknowledged",
+    "ownerId": "owner-01",
+    "deadline": "2025-10-22T16:00:00.000Z",
+    "severityReason": "An interview preview is attracting routine editorial interest; no urgent corrective action is indicated."
+  },
+  {
+    "id": "issue-13",
+    "title": "Edition correction note interpretation",
+    "brand": "Folio Press",
+    "topic": "Editorial clarification",
+    "severity": "high",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-21T19:00:00.000Z",
+    "severityReason": "Reports differ on the scope of an edition correction. A concise editorial clarification would reduce ambiguity."
+  },
+  {
+    "id": "issue-14",
+    "title": "Live recording audience policy",
+    "brand": "Echo Live",
+    "topic": "Product guidance",
+    "severity": "normal",
+    "status": "acknowledged",
+    "ownerId": "owner-05",
+    "deadline": "2025-10-22T02:00:00.000Z",
+    "severityReason": "Routine policy questions can be handled within the normal response window."
+  },
+  {
+    "id": "issue-15",
+    "title": "Stream premiere time confirmed",
+    "brand": "Luma Stream",
+    "topic": "Event schedule",
+    "severity": "normal",
+    "status": "resolved",
+    "ownerId": "owner-02",
+    "deadline": "2025-10-21T09:00:00.000Z",
+    "severityReason": "The premiere time is consistent in recent coverage; the clarification workflow is complete in this demo."
+  },
+  {
+    "id": "issue-16",
+    "title": "Folio contributor series announced",
+    "brand": "Folio Press",
+    "topic": "Programming",
+    "severity": "normal",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-22T22:00:00.000Z",
+    "severityReason": "Expected announcement coverage requires monitoring rather than escalation."
+  },
+  {
+    "id": "issue-17",
+    "title": "Ticket exchange terms misunderstood",
+    "brand": "Echo Live",
+    "topic": "Subscription features",
+    "severity": "high",
+    "status": "acknowledged",
+    "ownerId": "owner-05",
+    "deadline": "2025-10-21T17:00:00.000Z",
+    "severityReason": "Coverage confuses ticket exchanges with refunds. The assigned team should explain the distinction promptly."
+  },
+  {
+    "id": "issue-18",
+    "title": "Listening companion app preview",
+    "brand": "Echo Live",
+    "topic": "Programming",
+    "severity": "normal",
+    "status": "new",
+    "ownerId": null,
+    "deadline": "2025-10-23T03:00:00.000Z",
+    "severityReason": "Early preview coverage is exploratory and has no urgent response requirement."
+  }
+]

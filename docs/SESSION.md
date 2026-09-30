@@ -20,3 +20,9 @@ Planning complete. Implementation and deployment pending.
 
 ## Application structure milestone
 Vue/Vuetify shell, modular ECharts component, TypeScript/Vite configuration and deployment rewrite configured. Initial production build passes. GitHub private repository created and planning pushed. Vercel CLI is logged out; device authentication requested, team selection pending. Production dependency audit reports zero advisories; development tooling advisories will be assessed before handoff.
+
+## Dataset milestone
+72 fictional coverage items, 18 issues, 54 original stories, five owners and three brands added with domain types, shared scope selection, immutable transitions, fixed-clock helpers, saved-state validation, and data dictionary. Nine unit tests pass. Baseline: 15 open / 8 unassigned open / 3 overdue open / 72 articles.
+
+## Updated publication scope
+User supplied Vercel account/team `andy-protogen`, then explicitly prioritized GitHub publication and will connect Vercel themselves. User authorized public GitHub visibility. Continue to a tested public repository and provide exact Vercel connection instructions; do not claim a verified deployment.

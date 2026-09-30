@@ -1,0 +1,27 @@
+[
+  {
+    "id": "owner-01",
+    "name": "Mara Ellery",
+    "team": "Central communications"
+  },
+  {
+    "id": "owner-02",
+    "name": "Nico Vale",
+    "team": "Streaming press"
+  },
+  {
+    "id": "owner-03",
+    "name": "Sana Merritt",
+    "team": "Publications press"
+  },
+  {
+    "id": "owner-04",
+    "name": "Theo Calder",
+    "team": "Live events press"
+  },
+  {
+    "id": "owner-05",
+    "name": "Iris Fen",
+    "team": "Regional response"
+  }
+]
