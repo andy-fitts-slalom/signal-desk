@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, watch, ref } from 'vue'
 import * as echarts from 'echarts/core'
-import { meridianChartStyle } from '@meridian/ui/charts'
-import { tokens } from '@meridian/ui'
-const chartStyle = meridianChartStyle('dark')
+import { vesperChartStyle } from '@vesper/ui/charts'
+import { tokens } from '@vesper/ui'
+const chartStyle = vesperChartStyle('dark')
 const seriesColor = tokens.themes.dark.action
 import { BarChart, LineChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'

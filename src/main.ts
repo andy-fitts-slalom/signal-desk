@@ -16,12 +16,9 @@ import { mdi } from 'vuetify/iconsets/mdi-svg'
 import { signalIcons } from './icons'
 import * as directives from 'vuetify/directives'
 import 'vuetify/styles'
-import '@meridian/ui/fonts.css'
-import '@meridian/ui/styles.css'
-import {
-  meridianVuetifyTheme,
-  meridianVuetifyDefaults,
-} from '@meridian/ui/vuetify'
+import '@vesper/ui/fonts.css'
+import '@vesper/ui/styles.css'
+import { vesperVuetifyTheme, vesperVuetifyDefaults } from '@vesper/ui/vuetify'
 import './style.css'
 import App from './App.vue'
 const vuetify = createVuetify({
@@ -40,12 +37,12 @@ const vuetify = createVuetify({
   directives,
   icons: { defaultSet: 'mdi', aliases: signalIcons, sets: { mdi } },
   theme: {
-    defaultTheme: 'meridian',
-    themes: { meridian: meridianVuetifyTheme('dark') },
+    defaultTheme: 'vesper',
+    themes: { vesper: vesperVuetifyTheme('dark') },
   },
   defaults: {
-    ...meridianVuetifyDefaults,
-    VSelect: { ...meridianVuetifyDefaults.VSelect, hideDetails: 'auto' },
+    ...vesperVuetifyDefaults,
+    VSelect: { ...vesperVuetifyDefaults.VSelect, hideDetails: 'auto' },
   },
 })
 createApp(App).use(vuetify).mount('#app')

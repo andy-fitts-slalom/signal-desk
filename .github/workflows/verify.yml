@@ -1,4 +1,4 @@
-name: Verify Signal Desk
+name: Verify Watchlight
 on:
   push:
     branches: [main, 'refactor/**']

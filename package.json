@@ -1,5 +1,5 @@
 {
-  "name": "signal-desk",
+  "name": "watchlight",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@mdi/js": "^7.4.47",
-    "@meridian/ui": "file:vendor/meridian-ui-1.0.0.tgz",
     "echarts": "^6.0.0",
     "vue": "^3.5.0",
-    "vuetify": "^3.9.0"
+    "vuetify": "^3.9.0",
+    "@vesper/ui": "file:vendor/vesper-ui-2.0.0.tgz"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",

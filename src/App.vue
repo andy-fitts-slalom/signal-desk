@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import SignalChart from './components/SignalChart.vue'
-import { MeridianBrand, MeridianBadge, MeridianEmpty } from '@meridian/ui/vue'
+import { VesperBrand, VesperBadge, VesperEmpty } from '@vesper/ui/vue'
 import {
   articles,
   owners,
@@ -38,6 +38,7 @@ motionPreference.addEventListener('change', syncMotionPreference)
 onBeforeUnmount(() =>
   motionPreference.removeEventListener('change', syncMotionPreference),
 )
+// Keep the original key so existing saved assignments, statuses and history survive the rebrand.
 const STORAGE_KEY = 'signal-desk:v1'
 const state = ref<DemoState>(createSeedState())
 const storageError = ref('')
@@ -313,16 +314,14 @@ function reset() {
     ><a class="skip-link" href="#queue">Skip to issue queue</a
     ><v-main>
       <div class="topline">
-        <MeridianBrand />
-        <MeridianBadge class="demo-badge"
-          >Fictional demonstration</MeridianBadge
-        >
+        <VesperBrand />
+        <VesperBadge class="demo-badge">Fictional demonstration</VesperBadge>
       </div>
       <div class="shell">
         <header class="page-header">
           <div>
             <p class="eyebrow">COMMUNICATIONS / RESPONSE OPERATIONS</p>
-            <h1>Signal Desk<span class="heading-dot">.</span></h1>
+            <h1>Watchlight<span class="heading-dot">.</span></h1>
             <p class="subtitle">See the story. Coordinate the response.</p>
           </div>
           <div class="header-tools">
@@ -489,7 +488,7 @@ function reset() {
             </div>
             <div v-if="scope.issues.length" class="queue-scroll">
               <table class="issue-table">
-                <caption class="ms-sr-only">
+                <caption class="vs-sr-only">
                   Prioritized issues in the selected scope
                 </caption>
                 <thead>
@@ -508,13 +507,13 @@ function reset() {
                   >
                     <td>
                       <div class="issue-meta">
-                        <MeridianBadge
+                        <VesperBadge
                           :class="['severity', issue.severity]"
                           :tone="severityTone[issue.severity]"
-                          >{{ label(issue.severity) }}</MeridianBadge
+                          >{{ label(issue.severity) }}</VesperBadge
                         ><span>{{ issue.brand }}</span
                         ><span class="issue-id">{{
-                          issue.id.replace('issue-', 'SD-')
+                          issue.id.replace('issue-', 'WL-')
                         }}</span>
                       </div>
                       <button
@@ -535,10 +534,10 @@ function reset() {
                         <span class="avatar">{{ initials(issue.ownerId) }}</span
                         >{{ ownerName(issue.ownerId) }}
                       </div>
-                      <MeridianBadge
+                      <VesperBadge
                         class="status"
                         :tone="statusTone[issue.status]"
-                        >{{ label(issue.status) }}</MeridianBadge
+                        >{{ label(issue.status) }}</VesperBadge
                       >
                     </td>
                     <td>
@@ -581,7 +580,7 @@ function reset() {
                 </tbody>
               </table>
             </div>
-            <MeridianEmpty
+            <VesperEmpty
               v-else
               class="empty-state"
               title="No issues in this scope"
@@ -590,7 +589,7 @@ function reset() {
               <v-btn variant="outlined" @click="clearFilters"
                 >Clear filters</v-btn
               >
-            </MeridianEmpty>
+            </VesperEmpty>
             <div class="queue-footer">
               <span
                 >{{ scope.issues.length }} distinct issues ·
@@ -664,7 +663,7 @@ function reset() {
         <v-card v-if="selected" class="detail-card"
           ><div class="detail-top">
             <span class="eyebrow"
-              >ISSUE DETAIL / {{ selected.id.replace('issue-', 'SD-') }}</span
+              >ISSUE DETAIL / {{ selected.id.replace('issue-', 'WL-') }}</span
             ><v-btn
               icon="$mdi-close"
               aria-label="Close issue detail"
@@ -675,15 +674,15 @@ function reset() {
           </div>
           <v-card-text class="detail-body"
             ><div class="issue-meta">
-              <MeridianBadge
+              <VesperBadge
                 :class="['severity', selected.severity]"
                 :tone="severityTone[selected.severity]"
-                >{{ label(selected.severity) }}</MeridianBadge
+                >{{ label(selected.severity) }}</VesperBadge
               ><span>{{ selected.brand }}</span
-              ><MeridianBadge
+              ><VesperBadge
                 class="status"
                 :tone="statusTone[selected.status]"
-                >{{ label(selected.status) }}</MeridianBadge
+                >{{ label(selected.status) }}</VesperBadge
               >
             </div>
             <h2 id="detail-title">{{ selected.title }}</h2>
@@ -699,7 +698,7 @@ function reset() {
             <section
               :class="[
                 'severity-explainer',
-                `ms-tone-${severityTone[selected.severity]}`,
+                `vs-tone-${severityTone[selected.severity]}`,
               ]"
             >
               <h3>Why this matters</h3>

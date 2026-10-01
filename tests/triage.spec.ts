@@ -186,9 +186,7 @@ test('dashboard and detail pass automated accessibility basics and keyboard dism
   page,
 }) => {
   await page.goto('/')
-  await expect(
-    page.getByRole('heading', { name: 'Signal Desk.' }),
-  ).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Watchlight.' })).toBeVisible()
   expect(
     (
       await new AxeBuilder({ page })

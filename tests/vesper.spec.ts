@@ -1,4 +1,5 @@
 import { test, expect, type Page, type Locator } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 
 async function fitsPage(page: Page) {
   const dimensions = await page.evaluate(() => ({
@@ -59,7 +60,7 @@ async function select(page: Page, name: string, option: string) {
 }
 
 for (const width of [320, 390, 768, 1440]) {
-  test(`Meridian ${width}px queue, detail, empty and storage recovery fit with usable targets`, async ({
+  test(`Vesper ${width}px queue, detail, empty and storage recovery fit with usable targets`, async ({
     page,
   }) => {
     const minimum = width <= 700 ? 48 : 44
@@ -117,7 +118,7 @@ for (const width of [320, 390, 768, 1440]) {
   })
 }
 
-test('Meridian foundation, local fonts and actual canvas labels use the shared operational theme', async ({
+test('Vesper foundation, local fonts and actual canvas labels use the shared operational theme', async ({
   page,
 }) => {
   const fontRequests: string[] = []
@@ -136,17 +137,31 @@ test('Meridian foundation, local fonts and actual canvas labels use the shared o
     }
   })
   await page.goto('/')
-  await expect(page.locator('html')).toHaveAttribute('data-ms-theme', 'dark')
+  await expect(page.locator('html')).toHaveAttribute('data-vs-theme', 'dark')
   await expect(page.locator('html')).toHaveAttribute(
-    'data-ms-mode',
+    'data-vs-mode',
     'operations',
   )
-  await expect(page.locator('body')).toHaveClass(/ms-root/)
-  await expect(page.locator('.ms-brand__mark')).toBeVisible()
-  await expect(page.locator('.ms-brand')).toContainText('MERIDIAN')
-  await expect(
-    page.getByRole('heading', { name: 'Signal Desk.' }),
-  ).toBeVisible()
+  await expect(page.locator('body')).toHaveClass(/vs-root/)
+  await expect(page.locator('.vs-brand__mark')).toBeVisible()
+  await expect(page.locator('.vs-brand')).toContainText('VESPER')
+  await expect(page.locator('.vs-brand')).toContainText('MEDIA GROUP')
+  await expect(page).toHaveTitle('Watchlight · Vesper Media Group')
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+    'content',
+    'Watchlight — a fictional media-response operations demonstration for Vesper Media Group.',
+  )
+  const favicon = page.locator('link[rel="icon"]')
+  await expect(favicon).toHaveAttribute('href', '/vesper-mark.svg')
+  const response = await page.request.get('/vesper-mark.svg')
+  expect(response.ok()).toBe(true)
+  expect(await response.text()).toBe(
+    readFileSync(
+      'node_modules/@vesper/ui/assets/brand/vesper-mark.svg',
+      'utf8',
+    ),
+  )
+  await expect(page.getByRole('heading', { name: 'Watchlight.' })).toBeVisible()
   await page.evaluate(() => document.fonts.ready)
   const foundation = await page.evaluate(() => ({
     font: getComputedStyle(document.querySelector('.v-application')!)
@@ -162,9 +177,9 @@ test('Meridian foundation, local fonts and actual canvas labels use the shared o
     const probe = document.createElement('span')
     document.body.append(probe)
     const states = [
-      ['.severity.critical', '--ms-danger', 'color'],
-      ['.severity.high', '--ms-warning', 'color'],
-      ['.resolved-row .status', '--ms-success', 'color'],
+      ['.severity.critical', '--vs-danger', 'color'],
+      ['.severity.high', '--vs-warning', 'color'],
+      ['.resolved-row .status', '--vs-success', 'color'],
     ] as const
     const comparisons = states.map(([selector, token, property]) => {
       probe.style.color = `var(${token})`
@@ -390,3 +405,88 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     }
   })
 }
+
+test('pre-rebrand saved ownership, status and complete history survive Watchlight reload and confirmed reset', async ({
+  page,
+}) => {
+  // The v1 domain contract and storage key predate the presentation migration.
+  const seed = {
+    version: 1,
+    issues: JSON.parse(readFileSync('src/data/issues.json', 'utf8')),
+    activity: [],
+  }
+  const prior = {
+    ...seed,
+    issues: seed.issues.map((issue: { id: string }) =>
+      issue.id === 'issue-01'
+        ? { ...issue, ownerId: 'owner-02', status: 'resolved' }
+        : issue,
+    ),
+    activity: [
+      {
+        id: 'activity-1',
+        issueId: 'issue-01',
+        kind: 'assignment',
+        at: '2025-10-21T16:00:00.000Z',
+        message: 'Assigned to Nico Vale.',
+      },
+      {
+        id: 'activity-2',
+        issueId: 'issue-01',
+        kind: 'status',
+        at: '2025-10-21T16:00:00.000Z',
+        message: 'Resolved in this local demo.',
+      },
+    ],
+  }
+  const raw = JSON.stringify(prior)
+  await page.goto('/')
+  await page.evaluate((saved) => {
+    localStorage.setItem('signal-desk:v1', saved)
+    localStorage.setItem('unrelated-demo', 'preserve me')
+  }, raw)
+  await page.goto('/queue?region=Europe&issue=issue-01')
+  await expect(page).toHaveTitle('Watchlight · Vesper Media Group')
+  await expect(
+    page.getByRole('combobox', { name: 'Response owner', exact: true }),
+  ).toHaveValue('Nico Vale · Streaming press')
+  await expect(
+    page.getByRole('button', { name: 'Reopen issue', exact: true }),
+  ).toBeVisible()
+  await expect(page.locator('.activity-list li')).toHaveCount(2)
+  for (const item of prior.activity)
+    await expect(page.locator('.activity-list')).toContainText(item.message)
+  await expect(page.locator('.story-group')).toHaveCount(3)
+  await expect(page.locator('.coverage-item')).toHaveCount(4)
+  await expect(page.getByTestId('count-open')).toHaveText('14')
+  await expect(page.getByTestId('count-coverage')).toHaveText('29')
+  await page.reload()
+  expect(
+    await page.evaluate(() => localStorage.getItem('signal-desk:v1')),
+  ).toBe(raw)
+  await expect(page.locator('.activity-list li')).toHaveCount(2)
+  await page.getByRole('button', { name: 'Close issue detail' }).click()
+  await page.getByRole('button', { name: 'Reset demo', exact: true }).click()
+  await page.getByRole('button', { name: 'Keep changes' }).click()
+  expect(
+    await page.evaluate(() => localStorage.getItem('signal-desk:v1')),
+  ).toBe(raw)
+  await page.getByRole('button', { name: 'Reset demo', exact: true }).click()
+  await page
+    .getByRole('button', { name: 'Reset demo data', exact: true })
+    .click()
+  await expect(
+    page.getByText('Demo reset. Original issues and coverage restored.'),
+  ).toBeVisible()
+  await page.getByRole('button', { name: 'Dismiss', exact: true }).click()
+  await page.reload()
+  await expect(page.getByTestId('count-open')).toHaveText('15')
+  expect(
+    await page.evaluate(() =>
+      JSON.parse(localStorage.getItem('signal-desk:v1')!),
+    ),
+  ).toEqual(seed)
+  expect(
+    await page.evaluate(() => localStorage.getItem('unrelated-demo')),
+  ).toBe('preserve me')
+})
