@@ -1,4 +1,6 @@
-// Reproducible local visual evidence. Serve `npm run preview -- --port 4372 --strictPort` first.
+// Historical Meridian-release capture recipe; run only at that historical revision.
+// For current Vesper screenshots use capture-vesper.mjs; preserve archived evidence.
+// Serve `npm run preview -- --port 4372 --strictPort` first.
 import { chromium, expect } from '@playwright/test'
 import { mkdir, writeFile } from 'node:fs/promises'
 const baseURL = 'http://127.0.0.1:4372'

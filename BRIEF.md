@@ -1,5 +1,8 @@
 # Signal Desk — Project Brief
 
+> Historical planning brief. The naming and design addendum at the end supersedes the original product, organization and delivery names. Start with [README.md](README.md) for the current application and setup.
+
+
 ## What is this?
 
 Signal Desk is an operational dashboard for the media response lead at Meridian Signal Group, a fictional company spanning streaming entertainment, digital publications, podcasts, and live events. Central communications coordinates with brand and regional press teams. The lead starts each shift by deciding which developing stories need attention and who should respond.

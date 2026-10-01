@@ -1,12 +1,12 @@
 # Watchlight
 
-A media-response workspace for **Vesper Media Group**, an entirely fictional organization. Identify an urgent story, inspect its coverage, assign a response owner, acknowledge review, and resolve the issue.
+An operational dashboard for a media-response lead who needs to decide which stories need attention and who should respond. This P301 portfolio case study is a media-response workspace for **Vesper Media Group**, an entirely fictional organization. Identify an urgent story, inspect its coverage, assign a response owner, acknowledge review, and resolve the issue.
 
-**Publication:** [Public GitHub repository](https://github.com/andy-fitts-slalom/watchlight). The live-site requirement is **unmet**: no Watchlight Vercel project or production URL has been verified. A new deployment requires explicit user approval after automatic approval review blocked creation in the parent task. See [deployment handoff](docs/DEPLOYMENT.md).
+**Repository:** [watchlight](https://github.com/andy-fitts-slalom/watchlight). **Deployment status:** no production URL is recorded as verified. Run locally using the instructions below; see the [deployment handoff](docs/DEPLOYMENT.md) for the outstanding setup and approval requirements.
 
 ![Watchlight with Vesper UI 2.0.0](docs/images/vesper-2.0.0/desktop-1440.png)
 
-Watchlight uses the vendored **Vesper UI 2.0.0**, upgraded from Meridian UI 1.0.0 on `main`. The original V-and-star mark, dark/operations semantic tokens and locally hosted fonts unify the parent identity while Vuetify and ECharts retain application behavior. See [migration notes and asset provenance](docs/VESPER.md). A clean clone installs from `vendor/` without a sibling workspace.
+Watchlight uses the vendored **Vesper UI 2.0.0**. The original V-and-star mark, dark/operations semantic tokens and locally hosted fonts unify the parent identity while Vuetify and ECharts retain application behavior. See [migration notes and asset provenance](docs/VESPER.md). A clean clone installs from `vendor/` without a sibling workspace.
 
 The [learner-requirements audit](docs/REVIEW-READINESS.md) connects the prior brief to the implemented workflow, repository scaffolding, intentional hierarchy and verification evidence. Historical planning, commits and screenshots remain available.
 
@@ -61,7 +61,19 @@ Changes live in `localStorage` under the deliberately retained `signal-desk:v1` 
 
 The prototype has no authentication, backend, live news feed, real recipients, or real organization data. Keyboard navigation, focus treatment, chart text summaries and reduced-motion support are included. Automated checks are Chromium-based and do not substitute for a full cross-browser or assistive-technology audit. MIT applies to original prototype code; dependencies retain their own licenses.
 
-## Project notes
+## Project structure
+
+- `src/App.vue`: queue, filters, issue detail and response actions
+- `src/domain.ts`: scoped counts, deadlines, state transitions and storage validation
+- `src/data/`: fictional issues, articles, owners and brands
+- `src/components/SignalChart.vue`: ECharts rendering and lifecycle
+- `src/main.ts` and `src/style.css`: Vuetify setup and application presentation
+- `vendor/`: pinned Vesper UI package, installed independently of sibling projects
+- `tests/`: domain, workflow and presentation regression checks
+
+## Verification and project notes
+
+The recorded September 30, 2026 release passed 9 unit tests, 19 browser tests, type checks and production build. See the verification log for exact evidence and later checks. Historical briefs and migration records preserve earlier names; the current product is Watchlight for Vesper Media Group.
 
 - [Brief and acceptance criteria](BRIEF.md)
 - [Durable session handoff](docs/SESSION.md)

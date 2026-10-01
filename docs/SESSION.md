@@ -1,5 +1,11 @@
 # Watchlight session handoff — 2026-09-30
 
+## Documentation sweep — 2026-09-30
+
+Refreshed README onboarding, workflows, setup, project structure and dated verification context. Corrected current branding guidance and explicitly marked superseded planning/migration records as historical. Vesper UI 2.0.0 remains the vendored dependency; runtime source and package manifests contain no Meridian references. Historical screenshots, branch deployment exclusions and compatibility storage keys are preserved.
+
+Validation: 9 unit tests, production build and 19 local browser tests passed; README local links resolve. Browser preview startup initially hit sandbox EPERM, then passed with approved local-server access. No application behavior or dataset changed. Existing production evidence remains dated; this documentation sweep does not claim a new live-site verification.
+
 ## Current state
 
 Watchlight is the fictional Vesper Media Group operational media-response dashboard. The existing Meridian integration has been upgraded to vendored **@vesper/ui 2.0.0** on **main**, under the user's explicit main-only commit/push authorization. No branch or PR was created. The checkout is `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`; the former root path no longer exists.

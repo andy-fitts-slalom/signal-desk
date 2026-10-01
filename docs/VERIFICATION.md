@@ -1,17 +1,23 @@
 # Watchlight / Vesper UI 2.0.0 verification — 2026-09-30
 
+## Documentation sweep — 2026-09-30
+
+Refreshed README onboarding, workflows, setup, project structure and dated verification context. Corrected current branding guidance and explicitly marked superseded planning/migration records as historical. Vesper UI 2.0.0 remains the vendored dependency; runtime source and package manifests contain no Meridian references. Historical screenshots, branch deployment exclusions and compatibility storage keys are preserved.
+
+Validation: 9 unit tests, production build and 19 local browser tests passed; README local links resolve. Browser preview startup initially hit sandbox EPERM, then passed with approved local-server access. No application behavior or dataset changed. Existing production evidence remains dated; this documentation sweep does not claim a new live-site verification.
+
 ## Current results
 
-| Check | Actual result |
-| --- | --- |
-| `npm run check` | Passed, Vue/TypeScript |
-| `npm test` | 9/9 domain tests passed |
-| `npm run build` | Passed, local font/mark assets, no oversized JavaScript chunk warning |
-| `npm run test:e2e` | 19/19 Chromium tests passed, 29.8s |
+| Check                       | Actual result                                                                                                                                                                                                                                              |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run check`             | Passed, Vue/TypeScript                                                                                                                                                                                                                                     |
+| `npm test`                  | 9/9 domain tests passed                                                                                                                                                                                                                                    |
+| `npm run build`             | Passed, local font/mark assets, no oversized JavaScript chunk warning                                                                                                                                                                                      |
+| `npm run test:e2e`          | 19/19 Chromium tests passed, 29.8s                                                                                                                                                                                                                         |
 | Isolated committed checkout | `npm ci` and build passed in isolated archived checkouts with no sibling dependency; Vesper 2.0.0 installed, not a symlink; zero npm audit vulnerabilities. `74e0edb` also passed check/unit tests; its browser run exposed the Escape race repaired below |
-| Native 200% zoom | Actual `chrome.tabs.setZoom(2)` in isolated Chromium; 1440×913 CSS/DPR1 → 720×456 CSS/DPR2; triage, reload, confirmed reset and reload passed |
-| Accessibility basics | Existing axe WCAG2 A/AA + 2.1 AA checks: zero dashboard/detail violations; keyboard focus, return focus, nested Escape and reduced-motion regressions passed |
-| Integrity | All 52 consumed Vesper CSS variables defined; domain/data/original unit tests unchanged; prior brief is verbatim before addendum; historical screenshots retained |
+| Native 200% zoom            | Actual `chrome.tabs.setZoom(2)` in isolated Chromium; 1440×913 CSS/DPR1 → 720×456 CSS/DPR2; triage, reload, confirmed reset and reload passed                                                                                                              |
+| Accessibility basics        | Existing axe WCAG2 A/AA + 2.1 AA checks: zero dashboard/detail violations; keyboard focus, return focus, nested Escape and reduced-motion regressions passed                                                                                               |
+| Integrity                   | All 52 consumed Vesper CSS variables defined; domain/data/original unit tests unchanged; prior brief is verbatim before addendum; historical screenshots retained                                                                                          |
 
 ## Migration baseline and coverage
 
@@ -51,7 +57,9 @@ The records below describe earlier milestones and their historical authorization
 
 ---
 
-# Meridian UI migration verification — 2026-09-30
+# Meridian UI migration verification — 2026-09-30 (historical)
+
+This section records a superseded release. Package paths, test filenames, branch instructions and deployment status below apply to that revision only; current Vesper evidence appears above.
 
 ## Baseline and integrity
 
