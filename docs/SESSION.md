@@ -55,3 +55,6 @@ The workspace has moved to `/Users/mfittand/Projects/Protogen/p-case-studies/p30
 The supplied Meridian UI 1.0.0 release is copied into vendor/ and installed with a repository-relative file dependency and integrity lock. This sharing is authorized only for parent branding/presentation; application records/domain behavior remain independent. Work is on refactor/meridian-ui-1.0.0. The user's follow-up authorizes discrete milestone pushes to GitHub; main must remain untouched and no deployment is requested. Some integrations may automatically preview non-production branches; no preview is claimed verified here.
 
 Migration implementation and expanded visual verification are in progress.
+
+### Presentation milestone
+Meridian masthead/favicon, local DM Sans, dark/operations attributes, shared Vuetify theme/defaults, semantic badges/empty state, rewritten token-based product styles and resolved ECharts adapter are implemented. Larger metadata and control targets retain responsive queue/detail behavior. Visual/test findings fixed: floating-label contrast, phone target sizes, recovery-action overlap, clipped selected labels, and reduced-motion JavaScript overlay animation. Latest full production browser suite passes all 16 tests, including the original 8 unchanged. Domain code/data/tests are unchanged. Final screenshot/documentation packaging follows.

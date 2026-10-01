@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import SignalChart from './components/SignalChart.vue'
+import { MeridianBrand, MeridianBadge, MeridianEmpty } from '@meridian/ui/vue'
 import {
   articles,
   owners,
@@ -18,6 +19,25 @@ import {
   ageLabel,
 } from './domain'
 import type { DemoState, Filters, Status, Issue } from './domain'
+const severityTone = {
+  critical: 'danger',
+  high: 'warning',
+  normal: 'neutral',
+} as const
+const statusTone = {
+  new: 'info',
+  acknowledged: 'warning',
+  resolved: 'success',
+} as const
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
+const reduceMotion = ref(motionPreference.matches)
+function syncMotionPreference(event: MediaQueryListEvent) {
+  reduceMotion.value = event.matches
+}
+motionPreference.addEventListener('change', syncMotionPreference)
+onBeforeUnmount(() =>
+  motionPreference.removeEventListener('change', syncMotionPreference),
+)
 const STORAGE_KEY = 'signal-desk:v1'
 const state = ref<DemoState>(createSeedState())
 const storageError = ref('')
@@ -280,10 +300,10 @@ function reset() {
     ><a class="skip-link" href="#queue">Skip to issue queue</a
     ><v-main>
       <div class="topline">
-        <span
-          ><span class="signal-mark">∿</span> MERIDIAN
-          <span class="brand-light">SIGNAL GROUP</span></span
-        ><span class="demo-badge"><span></span> FICTIONAL DEMONSTRATION</span>
+        <MeridianBrand />
+        <MeridianBadge class="demo-badge"
+          >Fictional demonstration</MeridianBadge
+        >
       </div>
       <div class="shell">
         <header class="page-header">
@@ -337,6 +357,7 @@ function reset() {
               ></span
             >
             <v-select
+              :transition="reduceMotion ? false : undefined"
               v-model="filters.brand"
               label="Brand"
               :items="[
@@ -345,6 +366,7 @@ function reset() {
               ]"
             />
             <v-select
+              :transition="reduceMotion ? false : undefined"
               v-model="filters.region"
               label="Region"
               :items="[
@@ -353,6 +375,7 @@ function reset() {
               ]"
             />
             <v-select
+              :transition="reduceMotion ? false : undefined"
               v-model="filters.severity"
               label="Severity"
               :items="[
@@ -364,6 +387,7 @@ function reset() {
               ]"
             />
             <v-select
+              :transition="reduceMotion ? false : undefined"
               v-model="filters.status"
               label="Status"
               :items="[
@@ -452,12 +476,15 @@ function reset() {
             </div>
             <div v-if="scope.issues.length" class="queue-scroll">
               <table class="issue-table">
+                <caption class="ms-sr-only">
+                  Prioritized issues in the selected scope
+                </caption>
                 <thead>
                   <tr>
-                    <th>Issue / brand</th>
-                    <th>Owner / status</th>
-                    <th>Deadline</th>
-                    <th aria-label="Open detail"></th>
+                    <th scope="col">Issue / brand</th>
+                    <th scope="col">Owner / status</th>
+                    <th scope="col">Deadline</th>
+                    <th scope="col" aria-label="Open detail"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -468,15 +495,10 @@ function reset() {
                   >
                     <td>
                       <div class="issue-meta">
-                        <span :class="['severity', issue.severity]"
-                          ><span>{{
-                            issue.severity === 'critical'
-                              ? '◆'
-                              : issue.severity === 'high'
-                                ? '▲'
-                                : '●'
-                          }}</span>
-                          {{ label(issue.severity) }}</span
+                        <MeridianBadge
+                          :class="['severity', issue.severity]"
+                          :tone="severityTone[issue.severity]"
+                          >{{ label(issue.severity) }}</MeridianBadge
                         ><span>{{ issue.brand }}</span
                         ><span class="issue-id">{{
                           issue.id.replace('issue-', 'SD-')
@@ -500,9 +522,10 @@ function reset() {
                         <span class="avatar">{{ initials(issue.ownerId) }}</span
                         >{{ ownerName(issue.ownerId) }}
                       </div>
-                      <span class="status"
-                        ><span :class="['status-dot', issue.status]"></span
-                        >{{ label(issue.status) }}</span
+                      <MeridianBadge
+                        class="status"
+                        :tone="statusTone[issue.status]"
+                        >{{ label(issue.status) }}</MeridianBadge
                       >
                     </td>
                     <td>
@@ -545,17 +568,16 @@ function reset() {
                 </tbody>
               </table>
             </div>
-            <div v-else class="empty-state">
-              <v-icon icon="$mdi-filter-check-outline" size="36" />
-              <h3>No issues in this scope</h3>
-              <p>
-                Try another region or clear your filters to see the full
-                response queue.
-              </p>
+            <MeridianEmpty
+              v-else
+              class="empty-state"
+              title="No issues in this scope"
+              description="Try another region or clear your filters to see the full response queue."
+            >
               <v-btn variant="outlined" @click="clearFilters"
                 >Clear filters</v-btn
               >
-            </div>
+            </MeridianEmpty>
             <div class="queue-footer">
               <span
                 >{{ scope.issues.length }} distinct issues ·
@@ -619,6 +641,7 @@ function reset() {
         </footer>
       </div>
       <v-dialog
+        :transition="reduceMotion ? false : undefined"
         v-model="dialog"
         class="detail-dialog"
         @after-leave="restoreDetailFocus"
@@ -639,17 +662,16 @@ function reset() {
           </div>
           <v-card-text class="detail-body"
             ><div class="issue-meta">
-              <span :class="['severity', selected.severity]"
-                >{{
-                  selected.severity === 'critical'
-                    ? '◆'
-                    : selected.severity === 'high'
-                      ? '▲'
-                      : '●'
-                }}
-                {{ label(selected.severity) }}</span
+              <MeridianBadge
+                :class="['severity', selected.severity]"
+                :tone="severityTone[selected.severity]"
+                >{{ label(selected.severity) }}</MeridianBadge
               ><span>{{ selected.brand }}</span
-              ><span class="status">{{ label(selected.status) }}</span>
+              ><MeridianBadge
+                class="status"
+                :tone="statusTone[selected.status]"
+                >{{ label(selected.status) }}</MeridianBadge
+              >
             </div>
             <h2 id="detail-title">{{ selected.title }}</h2>
             <p class="topic">
@@ -661,7 +683,12 @@ function reset() {
               }}
               <span>·</span> {{ formatDate(selected.deadline) }}
             </p>
-            <section class="severity-explainer">
+            <section
+              :class="[
+                'severity-explainer',
+                `ms-tone-${severityTone[selected.severity]}`,
+              ]"
+            >
               <h3>Why this matters</h3>
               <p>{{ selected.severityReason }}</p>
               <span>Editorial severity label · not an AI score</span>
@@ -673,6 +700,7 @@ function reset() {
               </p>
               <div class="owner-form">
                 <v-select
+                  :transition="reduceMotion ? false : undefined"
                   v-model="ownerDraft"
                   label="Response owner"
                   :items="ownerOptions"
@@ -700,7 +728,7 @@ function reset() {
                 ><v-btn
                   v-if="selected.status !== 'resolved'"
                   variant="tonal"
-                  color="primary"
+                  color="success"
                   prepend-icon="$mdi-check-all"
                   @click="setStatus('resolved')"
                   >Resolve issue</v-btn
@@ -812,6 +840,7 @@ function reset() {
         >
       </v-dialog>
       <v-dialog
+        :transition="reduceMotion ? false : undefined"
         v-model="resetDialog"
         max-width="420"
         aria-labelledby="reset-title"

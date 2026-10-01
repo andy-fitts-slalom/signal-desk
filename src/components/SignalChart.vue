@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, watch, ref } from 'vue'
 import * as echarts from 'echarts/core'
+import { meridianChartStyle } from '@meridian/ui/charts'
+import { tokens } from '@meridian/ui'
+const chartStyle = meridianChartStyle('dark')
+const seriesColor = tokens.themes.dark.action
 import { BarChart, LineChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -25,27 +29,26 @@ function draw() {
     {
       animation: false,
       backgroundColor: 'transparent',
-      textStyle: { fontFamily: 'system-ui' },
+      textStyle: {
+        fontFamily: chartStyle.fontFamily,
+        color: chartStyle.text,
+        fontSize: 12,
+      },
       grid: {
-        left: 30,
+        left: 36,
         right: 12,
         top: 12,
-        bottom: props.kind === 'line' ? 38 : 26,
+        bottom: props.kind === 'line' ? 48 : 32,
       },
-      tooltip: {
-        trigger: 'axis',
-        backgroundColor: '#222a35',
-        borderColor: '#465160',
-        textStyle: { color: '#fff' },
-      },
+      tooltip: { ...chartStyle.tooltip, trigger: 'axis' },
       xAxis: {
         type: 'category',
         data: props.labels,
-        axisLine: { lineStyle: { color: '#343e4d' } },
+        axisLine: { lineStyle: { color: chartStyle.grid } },
         axisTick: { show: false },
         axisLabel: {
-          color: '#aab6c8',
-          fontSize: 10,
+          color: chartStyle.axis,
+          fontSize: 12,
           interval: props.kind === 'bar' ? 0 : 11,
           hideOverlap: true,
           formatter: (value: string) =>
@@ -55,20 +58,20 @@ function draw() {
       yAxis: {
         type: 'value',
         minInterval: 1,
-        axisLabel: { color: '#aab6c8', fontSize: 10 },
-        splitLine: { lineStyle: { color: '#29313e', type: 'dashed' } },
+        axisLabel: { color: chartStyle.axis, fontSize: 12 },
+        splitLine: { lineStyle: { color: chartStyle.grid, type: 'dashed' } },
       },
       series: [
         {
           type: props.kind,
           data: props.values,
           barMaxWidth: 35,
-          itemStyle: { color: '#bedbb4', borderRadius: [4, 4, 0, 0] },
-          lineStyle: { width: 2, color: '#bedbb4' },
+          itemStyle: { color: seriesColor, borderRadius: [4, 4, 0, 0] },
+          lineStyle: { width: 2, color: seriesColor },
           symbol: 'none',
           areaStyle:
             props.kind === 'line'
-              ? { color: '#bedbb4', opacity: 0.08 }
+              ? { color: seriesColor, opacity: 0.08 }
               : undefined,
         },
       ],
@@ -81,6 +84,10 @@ onMounted(() => {
   observer = new ResizeObserver(() => chart?.resize())
   observer.observe(root.value!)
   draw()
+  // Canvas must redraw after the locally hosted face becomes available.
+  document.fonts.ready.then(() => {
+    if (chart && !chart.isDisposed()) draw()
+  })
 })
 watch(() => [props.values, props.labels], draw, { deep: true })
 onBeforeUnmount(() => {
