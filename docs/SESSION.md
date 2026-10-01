@@ -1,5 +1,9 @@
 # Watchlight session handoff — 2026-09-30
 
+## README visual refresh — 2026-10-01
+
+The README now embeds a 1440 × 1000 screenshot of the Vesper UI 3.0 local production build at `docs/images/vesper-3.0.0/readme-dashboard.png`. The dark operations layout, queue and summary counts were inspected. No application source or fixture data changed; `npm run check`, 9 unit tests, production build and 19 browser tests passed.
+
 ## Production confirmation — 2026-10-01
 
 Commit `f080bd5` was pushed to `main`. [GitHub verification](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36832940005) passed clean install, type check, unit tests, build and browser suite. Vercel marked that commit's production deployment successful, and [Watchlight](https://watchlight-rouge.vercel.app/) opened in Chrome with the updated dark palette, queue and expected 15/8/3/72 summary. No new domain or route was created.

@@ -1,5 +1,9 @@
 # Watchlight / Vesper UI 2.0.0 verification — 2026-09-30
 
+## README visual refresh — 2026-10-01
+
+Captured `docs/images/vesper-3.0.0/readme-dashboard.png` from the local 3.0 production build at 1440 × 1000 after fonts loaded. The browser reported no page errors; the image and README link were inspected. `npm run check`, 9/9 unit tests, `npm run build` and 19/19 browser tests passed. This documentation change does not claim a new production deployment verification.
+
 ## Live result — 2026-10-01
 
 Pushed `f080bd5` to `main`. [GitHub Actions run 36832940005](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36832940005) succeeded, including the 19 browser checks. Vercel's commit status reported deployment complete. Opened [production Watchlight](https://watchlight-rouge.vercel.app/) in Chrome and inspected the dark dashboard, filter controls, response queue and 15 open / 8 unassigned / 3 overdue / 72 coverage metrics. The subtle palette change is present; the existing operations layout remains intact.
