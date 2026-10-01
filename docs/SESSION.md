@@ -48,3 +48,10 @@ Use `npm ci`, `npm run check`, `npm test`, `npm run build`, and `npm run test:e2
 Read docs/VERIFICATION.md for final results. The verification workflow runs on main pushes and pull requests. Browser tests can target an actual deployment with `PLAYWRIGHT_BASE_URL=https://ACTUAL-URL npm run test:e2e`.
 
 Remaining publication action: the user imports this repository into Vercel under `andy-protogen`, creates a separate `signal-desk` project (inspect any existing project before reuse), deploys `main`, then the actual production URL must be opened and checked for triage, persistence, direct issue loads/refreshes and phone layout. Add the real URL and verified commit to README and verification notes only after doing so.
+
+## Meridian UI migration — 2026-09-30
+The workspace has moved to `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`. Starting branch main was clean at migration start. Baseline type check, 9 unit tests, production build and all 8 Chromium browser tests passed (12.5s). Before screenshots are in docs/images/meridian-1.0.0/ (1440×1000 dashboard, 390×844 issue detail).
+
+The supplied Meridian UI 1.0.0 release is copied into vendor/ and installed with a repository-relative file dependency and integrity lock. This sharing is authorized only for parent branding/presentation; application records/domain behavior remain independent. Work is on refactor/meridian-ui-1.0.0. The user's follow-up authorizes discrete milestone pushes to GitHub; main must remain untouched and no deployment is requested. Some integrations may automatically preview non-production branches; no preview is claimed verified here.
+
+Migration implementation and expanded visual verification are in progress.
