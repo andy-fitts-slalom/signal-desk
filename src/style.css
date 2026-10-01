@@ -899,6 +899,14 @@ h4 {
     margin: var(--ms-space-3) 0 0;
   }
 }
+@media (max-width: 380px) {
+  .filter-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .filter-controls > .v-btn {
+    grid-column: 1;
+  }
+}
 @media (max-width: 700px), (pointer: coarse) {
   .v-btn,
   .issue-title,

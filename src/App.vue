@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, reactive, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, reactive, ref, watch } from 'vue'
 import SignalChart from './components/SignalChart.vue'
 import { MeridianBrand, MeridianBadge, MeridianEmpty } from '@meridian/ui/vue'
 import {
@@ -107,7 +107,20 @@ const dialog = computed({
   },
 })
 const ownerDraft = ref<string | null>(null)
+const ownerMenu = ref(false)
+function closeOwnerMenuOnEscape(event: KeyboardEvent) {
+  if (event.key !== 'Escape' || !ownerMenu.value) return
+  // A no-motion VSelect can leave the overlay stack before this same Escape
+  // reaches the parent dialog. Handle only the open nested picker here.
+  event.preventDefault()
+  event.stopPropagation()
+  ownerMenu.value = false
+  nextTick(() =>
+    document.getElementById('response-owner')?.focus({ preventScroll: true }),
+  )
+}
 watch(selectedId, () => {
+  ownerMenu.value = false
   ownerDraft.value = selected.value?.ownerId ?? null
   validation.value = ''
 })
@@ -698,10 +711,15 @@ function reset() {
               <p class="muted">
                 Assigning an owner does not change the issue’s status.
               </p>
-              <div class="owner-form">
+              <div class="owner-form" @keydown.capture="closeOwnerMenuOnEscape">
                 <v-select
                   :transition="reduceMotion ? false : undefined"
+                  id="response-owner"
                   v-model="ownerDraft"
+                  v-model:menu="ownerMenu"
+                  :menu-props="{
+                    contentProps: { onKeydownCapture: closeOwnerMenuOnEscape },
+                  }"
                   label="Response owner"
                   :items="ownerOptions"
                 /><v-btn
