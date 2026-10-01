@@ -6,7 +6,7 @@ An operational dashboard for a media-response lead who needs to decide which sto
 
 ![Watchlight with Vesper UI 2.0.0](docs/images/vesper-2.0.0/desktop-1440.png)
 
-Watchlight uses the vendored **Vesper UI 2.0.0**. The original V-and-star mark, dark/operations semantic tokens and locally hosted fonts unify the parent identity while Vuetify and ECharts retain application behavior. See [migration notes and asset provenance](docs/VESPER.md). A clean clone installs from `vendor/` without a sibling workspace.
+Watchlight uses the vendored **Vesper UI 3.0.0**. The original V-and-star mark, dark/operations semantic tokens and locally hosted fonts unify the parent identity while Vuetify and ECharts retain application behavior. See [migration notes and asset provenance](docs/VESPER.md). A clean clone installs from `vendor/` without a sibling workspace.
 
 The [learner-requirements audit](docs/REVIEW-READINESS.md) connects the prior brief to the implemented workflow, repository scaffolding, intentional hierarchy and verification evidence. Historical planning, commits and screenshots remain available.
 

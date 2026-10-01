@@ -4,7 +4,7 @@ Read BRIEF.md, docs/SESSION.md, docs/VERIFICATION.md and docs/VESPER.md before c
 
 Use Vue 3, TypeScript, Vite, Vuetify and ECharts. Preserve distinct issue counts, article-first regional membership, the fixed demo clock, separate ownership/status, evidence and URL behavior. Persist only locally and label this honestly. Keep `signal-desk:v1` for compatibility with existing saves.
 
-Vesper UI 2.0.0 is the current presentation package. Use the checked-in vendor tarball and repository-relative lockfile, dark/operations semantic tokens and framework-native accessible controls. Preserve component registration, chart lifecycle and app-owned domain rules.
+Vesper UI 3.0.0 is the current presentation package. Use the checked-in vendor tarball and repository-relative lockfile, dark/operations semantic tokens and framework-native accessible controls. Preserve component registration, chart lifecycle and app-owned domain rules.
 
 The current user authorizes descriptive incremental commits and pushes on main only. Do not create a refactor branch or PR, rewrite history, discard unrelated changes or delete historical screenshots. Run npm run check, npm test, npm run build and npm run test:e2e before pushing. Keep docs/SESSION.md and docs/VERIFICATION.md current with actual evidence. Never commit credentials or build artifacts.
 

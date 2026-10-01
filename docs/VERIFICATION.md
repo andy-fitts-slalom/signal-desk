@@ -1,5 +1,13 @@
 # Watchlight / Vesper UI 2.0.0 verification — 2026-09-30
 
+## Vesper UI 3.0.0 — 2026-10-01
+
+- Installed the portable `vendor/vesper-ui-3.0.0.tgz`; package and lockfile point only to that repository-local tarball.
+- `npm run check`, `npm test` (9/9), `npm run build`, and `npm run test:e2e` (19/19) passed. The initial browser run could not bind its local server in the sandbox; the same suite passed with local-server access.
+- Inspected the 1440px local Chrome dashboard: dark petrol/charcoal surfaces, cool off-white text, visible filter arrows and status labels. Existing browser checks cover 320/390/768/1440px, focus, accessibility basics, storage, reset and zoom proxy.
+- This is local verification; production commit/deployment status must be checked after push. The 2.0.0 results below are historical.
+
+
 ## Documentation sweep — 2026-09-30
 
 Refreshed README onboarding, workflows, setup, project structure and dated verification context. Corrected current branding guidance and explicitly marked superseded planning/migration records as historical. Vesper UI 2.0.0 remains the vendored dependency; runtime source and package manifests contain no Meridian references. Historical screenshots, branch deployment exclusions and compatibility storage keys are preserved.

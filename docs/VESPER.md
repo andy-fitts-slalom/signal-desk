@@ -1,5 +1,7 @@
 # Watchlight · Vesper UI 2.0.0 migration
 
+This page documents the historical 2.0.0 migration. The current 3.0.0 installation and checks are recorded in [SESSION.md](SESSION.md) and [VERIFICATION.md](VERIFICATION.md).
+
 ## Package and asset provenance
 
 This upgrades an existing Meridian UI 1.0.0 integration. `vendor/vesper-ui-2.0.0.tgz` is the unmodified supplied release; its SHA-256 matches the source release:

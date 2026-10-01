@@ -1,5 +1,12 @@
 # Watchlight session handoff — 2026-09-30
 
+## Vesper UI 3.0 direction — 2026-10-01
+
+The selected visual direction uses cool salt/fog surfaces and Barlow Condensed display type across Vesper. Watchlight remains a dark operations dashboard; its semantic dark text and surfaces now use the cooler shared palette. The independent vendored release is `@vesper/ui` 3.0.0. Issue data, routes, assignment/status rules and local storage were not changed.
+
+Local checks: `npm run check`, 9/9 unit tests, production build and 19/19 Chromium tests passed. The browser suite required local preview-server access outside the filesystem sandbox. Production verification is recorded separately after the main push. Earlier 2.0.0 sections below are historical.
+
+
 ## Documentation sweep — 2026-09-30
 
 Refreshed README onboarding, workflows, setup, project structure and dated verification context. Corrected current branding guidance and explicitly marked superseded planning/migration records as historical. Vesper UI 2.0.0 remains the vendored dependency; runtime source and package manifests contain no Meridian references. Historical screenshots, branch deployment exclusions and compatibility storage keys are preserved.
