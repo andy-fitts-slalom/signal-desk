@@ -65,3 +65,18 @@ Use a dedicated private GitHub repository named `signal-desk` under `andy-fitts-
 Keep `BRIEF.md`, `README.md`, and `LICENSE` in the root. Use an MIT license for original prototype code, without claiming rights to third-party dependencies. The README explains the fictional premise, setup, commands, data definitions, demo persistence/reset, limitations, and live URL. Keep agent instructions and dated decisions/progress under a small, organized `docs/` structure and an appropriate root `AGENTS.md`.
 
 Make and push descriptive commits as actual milestones are completed: planning, dataset, application structure, core flows, and verification. Do not fabricate development history. Verify the final deployed core flow, and document any remaining limitations honestly.
+
+
+---
+
+## Naming and design migration addendum — 2026-09-30
+
+The original plan above is retained as planning evidence. This addendum supersedes its product/parent names, repository destination and presentation dependency; the domain, intended user, queue-first workflow and acceptance criteria remain the plan.
+
+- Rename Signal Desk to **Watchlight**, the operational media-response dashboard for fictional **Vesper Media Group**. Use `andy-fitts-slalom/watchlight`, with incremental commits and verified pushes on `main`; do not create a new branch or PR.
+- Upgrade the already-adopted Meridian UI 1.0.0 to the supplied **Vesper UI 2.0.0**, vendored within this repository. Use the original V-and-star mark, shared VesperBrand lockup and dark/operations mode. Apply petrol, sky, sand, cream and coral through semantic roles, locally hosted DM Sans, readable tabular metrics, and 44px controls / 48px phone targets. Retain Vuetify controls and ECharts, their registration and lifecycle.
+- Preserve the dominant response queue, four metrics, filters, grouped evidence, desktop side detail and stacked phone queue/full-width detail. Retain all 18 issues, 72 articles, 54 originals and the initial 15 open / 8 unassigned / 3 overdue, with the fixed 2025-10-21 09:00 America/Los_Angeles clock. Display issue labels as WL-01 etc.; internal IDs and query links remain stable.
+- Keep `signal-desk:v1` as the compatibility storage key; do not rename or clear valid saved assignments, statuses or history. Recheck existing saves, reload, undo/reopen, confirmed reset and corrupt/blocked storage recovery.
+- Verify desktop and phone renders at 320/390/768/1440px, 200% zoom/reflow, keyboard focus, reduced motion and empty/error states. Retain meaningful tests and historical screenshots. Record exact verification scope and limits.
+- Audit against the supplied learner instructions: working end-to-end flows, visible media-response user fit, logical AI context docs, root README/LICENSE, real incremental history and plan/result alignment. Password protection is recommended, not mandatory.
+- The live accessible site criterion remains **unmet** until a new Watchlight deployment is explicitly approved, created and verified. The parent task's automatic approval review blocked project creation; this request authorizes main commits/pushes, not that deployment. Never invent a live URL or treat localhost as deployment evidence.

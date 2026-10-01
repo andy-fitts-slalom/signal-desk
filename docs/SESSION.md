@@ -1,3 +1,15 @@
+# Watchlight migration session — 2026-09-30
+
+Migration in progress on clean `main`, starting at `d77835a29763fe94902525bf071a8f4a99676a3b`, matching origin/main. The checkout is `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`; the old workspace path no longer exists. User authorization supersedes the historical branch-only restriction below.
+
+Baseline: `npm run check`, `npm test` (9/9), `npm run build`, `npm run test:e2e` (18/18, 31.2s) all passed before edits. Rendered desktop 1440×1000 queue and 390×844 detail inspected; new baseline screenshots retained under `docs/images/vesper-2.0.0/before-*`. Existing screenshots remain untouched.
+
+GitHub read-only verification confirms public `andy-fitts-slalom/watchlight`, default branch main, About “Watchlight | Vesper's fictional media-response dashboard”. Vercel: no Watchlight project or verified live URL per the user handoff; new deployment requires explicit approval after the parent task's automatic-review block. No deployment attempted.
+
+The sections below are historical records, not current branch/deployment instructions.
+
+---
+
 # Session handoff — 2026-09-30
 
 ## Current state
