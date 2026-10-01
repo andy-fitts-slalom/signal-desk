@@ -2,7 +2,9 @@
 
 ## Current state
 
-Signal Desk is implemented in this workspace and published to the dedicated public GitHub repository at https://github.com/andy-fitts-slalom/signal-desk on `main`. The user will connect Vercel themselves. **No Vercel project was created, linked, or deployed. There is no verified live URL.**
+Signal Desk's **Meridian UI 1.0.0 migration is complete** on `refactor/meridian-ui-1.0.0`. The user explicitly authorized discrete milestone pushes to GitHub after initially requesting local-only work. The branch is reviewable at https://github.com/andy-fitts-slalom/signal-desk/tree/refactor/meridian-ui-1.0.0 . Production `main` remains at `4cef204ba4c5f778769fe32458b99763aaa641f2`; no merge, production-branch push, or manual deployment was performed. No live migration URL has been verified. Automatic previews, if configured externally, are not evidence of verification.
+
+Current workspace: `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard` (the old root path contains only residual Vite cache). Read [MERIDIAN.md](MERIDIAN.md) for integration, provenance and screenshot links, and [VERIFICATION.md](VERIFICATION.md) for actual results. The earlier build/publication record below is retained as history.
 
 The root brief was compared with the supplied source, found byte-identical, and copied as requested. It remains unchanged. The workspace originally contained only that brief and no Git repository. No other case study, real client data, internal product material, or proprietary code was used.
 
@@ -50,11 +52,23 @@ Read docs/VERIFICATION.md for final results. The verification workflow runs on m
 Remaining publication action: the user imports this repository into Vercel under `andy-protogen`, creates a separate `signal-desk` project (inspect any existing project before reuse), deploys `main`, then the actual production URL must be opened and checked for triage, persistence, direct issue loads/refreshes and phone layout. Add the real URL and verified commit to README and verification notes only after doing so.
 
 ## Meridian UI migration — 2026-09-30
+
 The workspace has moved to `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`. Starting branch main was clean at migration start. Baseline type check, 9 unit tests, production build and all 8 Chromium browser tests passed (12.5s). Before screenshots are in docs/images/meridian-1.0.0/ (1440×1000 dashboard, 390×844 issue detail).
 
 The supplied Meridian UI 1.0.0 release is copied into vendor/ and installed with a repository-relative file dependency and integrity lock. This sharing is authorized only for parent branding/presentation; application records/domain behavior remain independent. Work is on refactor/meridian-ui-1.0.0. The user's follow-up authorizes discrete milestone pushes to GitHub; main must remain untouched and no deployment is requested. Some integrations may automatically preview non-production branches; no preview is claimed verified here.
 
-Migration implementation and expanded visual verification are in progress.
+Migration implementation and expanded visual verification are complete. The existing domain module, fixtures, domain tests and original browser tests are unchanged.
 
 ### Presentation milestone
-Meridian masthead/favicon, local DM Sans, dark/operations attributes, shared Vuetify theme/defaults, semantic badges/empty state, rewritten token-based product styles and resolved ECharts adapter are implemented. Larger metadata and control targets retain responsive queue/detail behavior. Visual/test findings fixed: floating-label contrast, phone target sizes, recovery-action overlap, clipped selected labels, and reduced-motion JavaScript overlay animation. Latest full production browser suite passes all 16 tests, including the original 8 unchanged. Domain code/data/tests are unchanged. Final screenshot/documentation packaging follows.
+
+Meridian masthead/favicon, local DM Sans, dark/operations attributes, shared Vuetify theme/defaults, semantic badges/empty state, rewritten token-based product styles and resolved ECharts adapter are implemented. Larger metadata and control targets retain responsive queue/detail behavior. Visual/test findings fixed: floating-label contrast, phone target sizes, recovery-action overlap, clipped selected labels, reduced-motion JavaScript overlay animation, and nested Escape propagation. Final full production browser suite passes all 18 tests, including the original 8 unchanged. Domain code/data/tests are unchanged. The verification milestone packages the additional regressions, reproducible screenshots, asset provenance, final notes, and branch-push CI.
+
+### Migration continuation
+
+- `c16f35c`: vendored release, baseline evidence and local refactor branch; pushed.
+- `7e3d256`: complete Meridian presentation migration and initial visual fixes; pushed.
+- `16dc3b7`: nested Escape/focus and narrow-phone filter refinements; pushed.
+- Final verification commit: expanded tests/screenshots, narrow-phone filter refinement, branch CI and durable notes. Obtain exact SHA with `git log -1`.
+- Package: `@meridian/ui` 1.0.0, installed from checked-in vendor tarball. An isolated temporary checkout successfully ran `npm ci` and `npm run build`; installed package is not a symlink. No sibling path is required.
+- Run `npm run check`, `npm test`, `npm run build`, `npm run test:e2e`. Browser suite remains on dedicated strict port 4371; the screenshot preview uses 4372. Do not reuse or stop unrelated servers.
+- To continue review: compare this feature branch to main, read docs/MERIDIAN.md, and inspect docs/images/meridian-1.0.0/manifest.json. Publication/merge/deployment is a separate future user decision; original BRIEF publication language does not authorize it for this migration.

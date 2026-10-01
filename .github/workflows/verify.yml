@@ -1,7 +1,7 @@
 name: Verify Signal Desk
 on:
   push:
-    branches: [main]
+    branches: [main, 'refactor/**']
   pull_request:
 permissions:
   contents: read

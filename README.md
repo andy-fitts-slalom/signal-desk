@@ -4,7 +4,9 @@ A media-response workspace for **Meridian Signal Group**, an entirely fictional 
 
 **Publication:** [Public GitHub repository](https://github.com/andy-fitts-slalom/signal-desk). Vercel connection and deployment are user-managed and pending; there is no verified live URL yet. See [deployment handoff](docs/DEPLOYMENT.md).
 
-![Signal Desk desktop response queue](docs/images/desktop.png)
+![Signal Desk with Meridian UI 1.0.0](docs/images/meridian-1.0.0/desktop-1440.png)
+
+This branch migrates presentation to the vendored **Meridian UI 1.0.0** release. See [migration notes and asset provenance](docs/MERIDIAN.md). The package installs from `vendor/` and needs no sibling workspace. The migration is under review on `refactor/meridian-ui-1.0.0`; no live migration deployment has been verified.
 
 ## Run locally
 
