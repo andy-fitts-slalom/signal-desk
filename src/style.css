@@ -134,6 +134,9 @@ h4 {
   overflow-wrap: anywhere;
   overflow: visible;
 }
+.v-select .v-field__append-inner {
+  padding-inline-end: var(--vs-space-2);
+}
 .v-field:focus-within {
   outline: var(--vs-focus-width) solid var(--vs-focus);
   outline-offset: var(--vs-focus-offset);
