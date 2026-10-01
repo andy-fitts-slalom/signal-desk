@@ -1,5 +1,10 @@
 # Watchlight / Vesper UI 2.0.0 verification — 2026-09-30
 
+## Live result — 2026-10-01
+
+Pushed `f080bd5` to `main`. [GitHub Actions run 36832940005](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36832940005) succeeded, including the 19 browser checks. Vercel's commit status reported deployment complete. Opened [production Watchlight](https://watchlight-rouge.vercel.app/) in Chrome and inspected the dark dashboard, filter controls, response queue and 15 open / 8 unassigned / 3 overdue / 72 coverage metrics. The subtle palette change is present; the existing operations layout remains intact.
+
+
 ## Vesper UI 3.0.0 — 2026-10-01
 
 - Installed the portable `vendor/vesper-ui-3.0.0.tgz`; package and lockfile point only to that repository-local tarball.

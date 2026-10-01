@@ -1,5 +1,10 @@
 # Watchlight session handoff — 2026-09-30
 
+## Production confirmation — 2026-10-01
+
+Commit `f080bd5` was pushed to `main`. [GitHub verification](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36832940005) passed clean install, type check, unit tests, build and browser suite. Vercel marked that commit's production deployment successful, and [Watchlight](https://watchlight-rouge.vercel.app/) opened in Chrome with the updated dark palette, queue and expected 15/8/3/72 summary. No new domain or route was created.
+
+
 ## Vesper UI 3.0 direction — 2026-10-01
 
 The selected visual direction uses cool salt/fog surfaces and Barlow Condensed display type across Vesper. Watchlight remains a dark operations dashboard; its semantic dark text and surfaces now use the cooler shared palette. The independent vendored release is `@vesper/ui` 3.0.0. Issue data, routes, assignment/status rules and local storage were not changed.
