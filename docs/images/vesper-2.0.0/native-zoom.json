@@ -1,0 +1,20 @@
+{
+  "method": "Actual Chromium chrome.tabs.setZoom(2), isolated temporary profile/extension, no CSS zoom or viewport emulation",
+  "zoom": 2,
+  "before": {
+    "width": 1440,
+    "height": 913,
+    "dpr": 1
+  },
+  "after": {
+    "width": 720,
+    "height": 456,
+    "dpr": 2,
+    "scrollWidth": 720
+  },
+  "flows": "Owner assignment, acknowledge, resolve, reload persistence, confirmed reset and reload passed",
+  "screenshots": [
+    "native-zoom-200-dashboard.png",
+    "native-zoom-200-detail.png"
+  ]
+}

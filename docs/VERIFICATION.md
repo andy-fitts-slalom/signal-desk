@@ -1,12 +1,53 @@
-# Watchlight migration verification — 2026-09-30
+# Watchlight / Vesper UI 2.0.0 verification — 2026-09-30
 
-Migration in progress on clean `main`, starting at `d77835a29763fe94902525bf071a8f4a99676a3b`, matching origin/main. The checkout is `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`; the old workspace path no longer exists. User authorization supersedes the historical branch-only restriction below.
+## Current results
 
-Baseline: `npm run check`, `npm test` (9/9), `npm run build`, `npm run test:e2e` (18/18, 31.2s) all passed before edits. Rendered desktop 1440×1000 queue and 390×844 detail inspected; new baseline screenshots retained under `docs/images/vesper-2.0.0/before-*`. Existing screenshots remain untouched.
+| Check | Actual result |
+| --- | --- |
+| `npm run check` | Passed, Vue/TypeScript |
+| `npm test` | 9/9 domain tests passed |
+| `npm run build` | Passed, local font/mark assets, no oversized JavaScript chunk warning |
+| `npm run test:e2e` | 19/19 Chromium tests passed, 29.8s |
+| Isolated committed checkout | `npm ci` and build passed in isolated archived checkouts with no sibling dependency; Vesper 2.0.0 installed, not a symlink; zero npm audit vulnerabilities. `74e0edb` also passed check/unit tests; its browser run exposed the Escape race repaired below |
+| Native 200% zoom | Actual `chrome.tabs.setZoom(2)` in isolated Chromium; 1440×913 CSS/DPR1 → 720×456 CSS/DPR2; triage, reload, confirmed reset and reload passed |
+| Accessibility basics | Existing axe WCAG2 A/AA + 2.1 AA checks: zero dashboard/detail violations; keyboard focus, return focus, nested Escape and reduced-motion regressions passed |
+| Integrity | All 52 consumed Vesper CSS variables defined; domain/data/original unit tests unchanged; prior brief is verbatim before addendum; historical screenshots retained |
 
-GitHub read-only verification confirms public `andy-fitts-slalom/watchlight`, default branch main, About “Watchlight | Vesper's fictional media-response dashboard”. Vercel: no Watchlight project or verified live URL per the user handoff; new deployment requires explicit approval after the parent task's automatic-review block. No deployment attempted.
+## Migration baseline and coverage
 
-The sections below are historical records, not current branch/deployment instructions.
+Started from clean main `d77835a29763fe94902525bf071a8f4a99676a3b`, already containing Meridian 1.0.0 and matching origin/main. Before edits, type check, 9 domain tests, build and 18 browser tests passed (31.2s). The running baseline was inspected at 1440×1000 and 390×844 and captured under `images/vesper-2.0.0/before-*`.
+
+The original 8 workflow scenarios remain. The 10 Meridian presentation scenarios now live in `tests/vesper.spec.ts`; theme/name expectations changed, behavior assertions were retained. One additional scenario seeds pre-rebrand v1 ownership, resolution and complete history, checks byte-identical persistence through reload/direct region+issue loads, checks grouped evidence and counts, cancels reset, then confirms reset without deleting an unrelated storage key. The foundation scenario also validates title/description and the served favicon against the exact package SVG.
+
+Coverage includes owner picker/save, independent assignment/status, acknowledge/resolve/reopen/undo, activity, confirmation/cancel, snackbar dismissal, reload/reset, article-first Europe scope (29 articles / 18 distinct issues), all evidence with outside-region labeling, empty queue and clear recovery, corrupt-state seed fallback, failed-save memory retention/retry, direct `/queue` loads, URL filter/detail retention and queue scroll/focus restoration.
+
+At 320/390/768/1440px the suite measures page/detail overflow, actual enabled controls (44px desktop / 48px phone), readable values and non-overlapping storage-recovery actions. Native VSelect focus remains visible. Repeated nested Escape sequences pass with and without reduced motion. Actual overlay animation calls have no positive duration under reduced motion. DM Sans loads locally, metrics use tabular numerals, chart text is at least 12px and canvas colors are resolved values. The shared package still contains presentation only.
+
+Final staging review found `index.html` missing from the first implementation commit `b4f76a9`, despite being present during local testing. GitHub run [36824997894](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36824997894) failed its theme/title/accessibility expectations. Commit `74e0edb` adds the tested entrypoint, Vesper root attributes, favicon and Watchlight metadata. History was preserved rather than amended.
+
+An isolated checkout then exposed intermittent immediate Escape dismissal after reopening detail: 2/10 targeted repetitions reproduced it. Vuetify defers the overlay global-top flag using a timer. A capture listener now dismisses only the active app-owned detail when neither its owner menu nor reset confirmation is open; existing nested-picker handling and after-leave focus/scroll restoration remain. The existing regression assertions were not weakened. After the fix, all 19 browser tests passed (29.8s), and 10/10 targeted repetitions passed (22.4s). Fresh screenshots and native zoom workflow were captured against the fixed build.
+
+An initial run of the new saved-state test could not load the browser suite because importing the Vite domain module from Node required JSON import attributes. The fixture was corrected to read the unchanged JSON directly, without modifying application code or weakening an assertion. The final 19-test run above passed.
+
+## Rendered inspection and screenshots
+
+The [Vesper manifest](images/vesper-2.0.0/manifest.json) records 26 standard viewport captures, sizes, local query paths and reduced-motion settings; no page errors were recorded. Separate [native zoom evidence](images/vesper-2.0.0/native-zoom.json) records actual tab zoom and the tested flow. Native zoom screenshots use Chromium viewport capture after finite animations settle, avoiding Playwright's CSS-pixel clipping under tab zoom. The automated 720×500 DPR2 reflow proxy remains clearly labeled as a proxy.
+
+Inspected current images: 1440 dashboard/side detail/activity, 768 dashboard, 390 dashboard/owner picker/reset/corrupt fallback/empty queue, 320 stacked queue/failed-save recovery, 200% reflow detail, and actual native-zoom dashboard/detail. The petrol/night surfaces, sand/cream text, sky actions and coral danger use semantic tokens. Labels remain legible, the owner menu is opaque/focused, recovery actions sit below phone error text, and scrollable evidence/activity remain usable. The queue precedes supporting charts and phone detail fills the width.
+
+Reproduce against the local production preview at strict port 4372 with `node scripts/capture-vesper.mjs` and `node scripts/capture-native-zoom.mjs`. The latter uses a temporary test extension/profile and does not access personal browser state. Port 4371 remains exclusive to the production-build browser suite. No historical screenshots were deleted or overwritten.
+
+## GitHub, learner audit and deployment
+
+`fbdf5bd` (plan/baseline) and `b4f76a9` (implementation) were pushed to main after checks. GitHub authenticated read confirms public [watchlight](https://github.com/andy-fitts-slalom/watchlight), default main, and the About description was updated with the full Vesper Media Group name and operational purpose. No branch, PR or rewritten history. GitHub run [36825236930](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36825236930) passed on the document correction `74e0edb`. The final fix/evidence increment passed the local checks above; its subsequent remote result is available in the repository Actions history.
+
+The [learner-requirements audit](REVIEW-READINESS.md) checks core flows, industry/user fit, context docs, root README/LICENSE, real commit milestones and plan/result alignment. **Live accessible site: unmet.** There is no verified live Watchlight deployment. The user's handoff says no Vercel project exists; Vercel inventory was not re-queried in this run. No creation/link/deployment was attempted. Parent-task automatic approval review blocked a new production project; obtain explicit user approval before creating/deploying Watchlight. See [DEPLOYMENT.md](DEPLOYMENT.md). Password protection is recommended, not mandatory.
+
+## Limits
+
+Native Chromium zoom and local production behavior are verified; Safari/Firefox, full screen-reader review, physical-phone keyboards/safe areas and live URL routing remain unverified. State remains local to the origin/browser with no backend, notifications or cross-tab synchronization. Fixed activity timestamps intentionally use sequence for ordering.
+
+The records below describe earlier milestones and their historical authorization/status, not current instructions.
 
 ---
 

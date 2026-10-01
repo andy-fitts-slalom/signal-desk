@@ -1,0 +1,318 @@
+{
+  "environment": "Local production build at 127.0.0.1:4372",
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "desktop-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; 15 open, 8 unassigned, 3 overdue, 72 articles",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "detail-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "devicePixelRatio": 1,
+      "state": "Urgent unassigned WL-01; desktop side detail",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "activity-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "devicePixelRatio": 1,
+      "state": "WL-01 assigned, acknowledged, resolved; grouped evidence and ordered local activity",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "dashboard-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; responsive masthead, filters and scoped metrics",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "queue-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; response queue and targets",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "detail-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "WL-01; full-width phone detail or desktop side detail at 768px",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "empty-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Folio Press + Asia Pacific; zero scoped issues/articles with clear recovery",
+      "reducedMotion": true,
+      "url": "/?brand=Folio+Press&region=Asia+Pacific",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "corrupt-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Corrupt saved state; seed fallback and visible Retry save",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "blocked-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Failed storage write; in-memory acknowledgment with retry action",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "dashboard-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; responsive masthead, filters and scoped metrics",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "queue-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; response queue and targets",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "detail-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "WL-01; full-width phone detail or desktop side detail at 768px",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "owner-picker-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Open keyboard-focused owner picker; all local owner choices",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "snackbar-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Local acknowledgment feedback; no shared-state claim",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "empty-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Folio Press + Asia Pacific; zero scoped issues/articles with clear recovery",
+      "reducedMotion": true,
+      "url": "/?brand=Folio+Press&region=Asia+Pacific",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "reset-confirm-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Reset confirmation; keep changes or explicit restore",
+      "reducedMotion": true,
+      "url": "/?brand=Folio+Press&region=Asia+Pacific",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "corrupt-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Corrupt saved state; seed fallback and visible Retry save",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "blocked-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Failed storage write; in-memory acknowledgment with retry action",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "dashboard-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; responsive masthead, filters and scoped metrics",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "queue-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Original snapshot; response queue and targets",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "detail-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "WL-01; full-width phone detail or desktop side detail at 768px",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "empty-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Folio Press + Asia Pacific; zero scoped issues/articles with clear recovery",
+      "reducedMotion": true,
+      "url": "/?brand=Folio+Press&region=Asia+Pacific",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "corrupt-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Corrupt saved state; seed fallback and visible Retry save",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "blocked-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "devicePixelRatio": 1,
+      "state": "Failed storage write; in-memory acknowledgment with retry action",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "zoom-200-1440.png",
+      "viewport": {
+        "width": 720,
+        "height": 500
+      },
+      "devicePixelRatio": 2,
+      "state": "200% browser-zoom reflow proxy: 720x500 CSS pixels at DPR2, 1440x1000 output; not native browser zoom certification",
+      "reducedMotion": true,
+      "url": "/",
+      "capture": "Chromium viewport screenshot, local production build"
+    },
+    {
+      "file": "zoom-detail-200-1440.png",
+      "viewport": {
+        "width": 720,
+        "height": 500
+      },
+      "devicePixelRatio": 2,
+      "state": "WL-01 at 200% browser-zoom reflow proxy (720x500 CSS pixels, DPR2)",
+      "reducedMotion": true,
+      "url": "/?issue=issue-01",
+      "capture": "Chromium viewport screenshot, local production build"
+    }
+  ]
+}

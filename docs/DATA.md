@@ -1,6 +1,6 @@
 # Fictional data dictionary
 
-All entities and editorial content are invented for Meridian Signal Group. The deterministic JSON files are independent from other case studies and contain no live feed, client material, audience estimates, or external article links.
+All entities and editorial content are invented for Vesper Media Group. The deterministic JSON files are independent from other case studies and contain no live feed, client material, audience estimates, or external article links.
 
 ## Snapshot and denominators
 

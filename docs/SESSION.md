@@ -1,12 +1,41 @@
-# Watchlight migration session — 2026-09-30
+# Watchlight session handoff — 2026-09-30
 
-Migration in progress on clean `main`, starting at `d77835a29763fe94902525bf071a8f4a99676a3b`, matching origin/main. The checkout is `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`; the old workspace path no longer exists. User authorization supersedes the historical branch-only restriction below.
+## Current state
 
-Baseline: `npm run check`, `npm test` (9/9), `npm run build`, `npm run test:e2e` (18/18, 31.2s) all passed before edits. Rendered desktop 1440×1000 queue and 390×844 detail inspected; new baseline screenshots retained under `docs/images/vesper-2.0.0/before-*`. Existing screenshots remain untouched.
+Watchlight is the fictional Vesper Media Group operational media-response dashboard. The existing Meridian integration has been upgraded to vendored **@vesper/ui 2.0.0** on **main**, under the user's explicit main-only commit/push authorization. No branch or PR was created. The checkout is `/Users/mfittand/Projects/Protogen/p-case-studies/p301-dashboard`; the former root path no longer exists.
 
-GitHub read-only verification confirms public `andy-fitts-slalom/watchlight`, default branch main, About “Watchlight | Vesper's fictional media-response dashboard”. Vercel: no Watchlight project or verified live URL per the user handoff; new deployment requires explicit approval after the parent task's automatic-review block. No deployment attempted.
+Read [VESPER.md](VESPER.md), [VERIFICATION.md](VERIFICATION.md), and the [learner audit](REVIEW-READINESS.md). The original BRIEF is retained verbatim before its dated naming/design addendum. Earlier records below are historical evidence; their old naming and branch-only/deployment instructions are superseded by this section and AGENTS.md.
 
-The sections below are historical records, not current branch/deployment instructions.
+## Delivered and preserved
+
+- VesperBrand, supplied original SVG/favicon, Watchlight/Vesper Media Group title/metadata, vs- attributes/classes/semantic variables, local fonts, Vuetify dark theme/defaults and resolved ECharts adapter.
+- Queue-first four-metric workflow; desktop side detail, stacked phone queue, full-width phone detail, grouped evidence, filters, URL context, keyboard focus, reduced motion, confirmation and snackbar.
+- Domain module, JSON data and original unit tests are byte-unchanged from `d77835a`. Still 18 issues / 72 articles / 54 originals; initial 15 open / 8 unassigned / 3 overdue; fixed 2025-10-21 09:00 America/Los_Angeles clock, article-first regional membership and independent assignment/status.
+- `signal-desk:v1` deliberately retained. Existing valid saved assignments/status/history survive unchanged; corrupt/blocked storage recovery and reset remain tested. Product-visible WL-01 labels do not change internal IDs or URLs.
+- Historical commits and screenshots preserved. Current before/after evidence is in `docs/images/vesper-2.0.0/`; reproduction scripts are `capture-vesper.mjs` and `capture-native-zoom.mjs`.
+
+## Actual verification
+
+`npm run check`, `npm test` (9/9), `npm run build`, `npm run test:e2e` (19/19, 29.8s) passed. Original eight browser scenarios remain with only their product-title expectation updated; ten prior presentation scenarios migrated and one saved-state compatibility scenario added. Dashboard/detail axe checks pass with zero violations. All four requested viewport widths, keyboard focus and nested Escape, 44px/48px targets, empty/error recovery and reduced-motion overlay behavior pass.
+
+Native Chromium tab zoom at 200% also passed owner → acknowledge → resolve → reload → confirmed reset → reload. Actual viewport changes from 1440×913 CSS pixels, DPR1, to 720×456, DPR2. A separate responsive reflow proxy remains in the automated suite. Rendered desktop, tablet, phone, native zoom and edge-state images were inspected; 26 standard captures reported no page errors, plus two native zoom captures and two baseline captures are retained.
+
+Isolated `git archive` copies passed `npm ci` and production build without a sibling package; Vesper 2.0.0 is a real installed directory and npm reported zero vulnerabilities. The `74e0edb` copy also passed type checks and 9 domain tests, then exposed the Escape race. After the fix, the full local suite passed 19/19 and the exact failing scenario passed 10/10 repetitions (22.4s). All 52 app-consumed semantic variables resolve to package definitions.
+
+## Commits and external status
+
+- Starting point: `d77835a29763fe94902525bf071a8f4a99676a3b`, clean main matching origin/main and containing the earlier Meridian work.
+- `fbdf5bd` — prior-plan addendum, current agent instructions and inspected baseline; pushed to main.
+- `b4f76a9` — Vesper presentation migration and compatibility regression; pushed to main.
+- `74e0edb` — add the tested HTML entrypoint omitted from the prior staging; pushed. The intermediate CI failure is documented in VERIFICATION.md.
+- The final fix/evidence increment fixes the immediate Escape/reopen timing race exposed by clean-checkout testing; native picker behavior and focus restoration are preserved.
+- The evidence/documentation increment accompanying this handoff adds the final screenshots, reproducible native zoom check, learner audit and current publication instructions. Use `git log -3 --oneline` for its exact SHA.
+
+GitHub is public [andy-fitts-slalom/watchlight](https://github.com/andy-fitts-slalom/watchlight), default branch main. Authenticated access verified and About updated to “Watchlight — Vesper Media Group's fictional media-response dashboard. Triage coverage, assign owners, and coordinate a response.” Main pushes occur only after required local checks; GitHub verification [36825236930](https://github.com/andy-fitts-slalom/watchlight/actions/runs/36825236930) passed on `74e0edb`. The final fix/evidence increment passed local checks; see the Actions history for its subsequent remote result.
+
+**Live-site requirement remains unmet.** Per the user's current handoff there is no Watchlight Vercel project. This run did not query Vercel inventory, create/link a project, or deploy. New production project creation was blocked by automatic approval review in the parent task; explicit user approval is required before a new Watchlight deployment. The detailed rejection reason was not provided here. Do not claim a production URL exists or substitute local verification for live acceptance.
+
+After approval, follow [DEPLOYMENT.md](DEPLOYMENT.md), inspect the destination, create the dedicated project, verify the actual production URL/commit and repeat the core direct-load/refresh/triage/reset/phone checks. Password protection is recommended, not mandatory. Safari/Firefox, full assistive-technology and physical-phone behavior remain unverified.
 
 ---
 

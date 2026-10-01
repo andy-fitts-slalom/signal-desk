@@ -1,4 +1,6 @@
-# Meridian UI 1.0.0 migration
+# Meridian UI 1.0.0 migration (historical)
+
+This records the earlier migration. Current integration and authorization are in [VESPER.md](VESPER.md) and [SESSION.md](SESSION.md). The old tarball/favicon have been replaced in the current checkout; they remain recoverable in Git history. Historical screenshots are retained. The capture script in this record applies to the historical revision.
 
 ## Scope and provenance
 

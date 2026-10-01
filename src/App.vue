@@ -128,6 +128,25 @@ watch(selectedId, () => {
 ownerDraft.value = selected.value?.ownerId ?? null
 const undo = ref<{ id: string; status: Status } | null>(null)
 const resetDialog = ref(false)
+function dismissDetailOnEscape(event: KeyboardEvent) {
+  if (
+    event.key !== 'Escape' ||
+    !dialog.value ||
+    ownerMenu.value ||
+    resetDialog.value
+  )
+    return
+  // Vuetify defers its global-top flag with a timer. A just-reopened detail
+  // must still respond to Escape. Leave open nested pickers to their scoped
+  // handler and keep the existing after-leave focus/scroll restoration.
+  event.preventDefault()
+  event.stopPropagation()
+  dialog.value = false
+}
+window.addEventListener('keydown', dismissDetailOnEscape, true)
+onBeforeUnmount(() =>
+  window.removeEventListener('keydown', dismissDetailOnEscape, true),
+)
 const countDefinitions = [
   {
     key: 'open' as const,

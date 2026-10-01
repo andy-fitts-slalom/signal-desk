@@ -1,12 +1,14 @@
-# Signal Desk
+# Watchlight
 
-A media-response workspace for **Meridian Signal Group**, an entirely fictional organization. Identify an urgent story, inspect its coverage, assign a response owner, acknowledge review, and resolve the issue.
+A media-response workspace for **Vesper Media Group**, an entirely fictional organization. Identify an urgent story, inspect its coverage, assign a response owner, acknowledge review, and resolve the issue.
 
-**Publication:** [Public GitHub repository](https://github.com/andy-fitts-slalom/signal-desk). Vercel connection and deployment are user-managed and pending; there is no verified live URL yet. See [deployment handoff](docs/DEPLOYMENT.md).
+**Publication:** [Public GitHub repository](https://github.com/andy-fitts-slalom/watchlight). The live-site requirement is **unmet**: no Watchlight Vercel project or production URL has been verified. A new deployment requires explicit user approval after automatic approval review blocked creation in the parent task. See [deployment handoff](docs/DEPLOYMENT.md).
 
-![Signal Desk with Meridian UI 1.0.0](docs/images/meridian-1.0.0/desktop-1440.png)
+![Watchlight with Vesper UI 2.0.0](docs/images/vesper-2.0.0/desktop-1440.png)
 
-This branch migrates presentation to the vendored **Meridian UI 1.0.0** release. See [migration notes and asset provenance](docs/MERIDIAN.md). The package installs from `vendor/` and needs no sibling workspace. The migration is under review on `refactor/meridian-ui-1.0.0`; no live migration deployment has been verified.
+Watchlight uses the vendored **Vesper UI 2.0.0**, upgraded from Meridian UI 1.0.0 on `main`. The original V-and-star mark, dark/operations semantic tokens and locally hosted fonts unify the parent identity while Vuetify and ECharts retain application behavior. See [migration notes and asset provenance](docs/VESPER.md). A clean clone installs from `vendor/` without a sibling workspace.
+
+The [learner-requirements audit](docs/REVIEW-READINESS.md) connects the prior brief to the implemented workflow, repository scaffolding, intentional hierarchy and verification evidence. Historical planning, commits and screenshots remain available.
 
 ## Run locally
 
@@ -34,7 +36,7 @@ Browser tests reserve port 4371 and refuse to reuse an existing process. To chec
 ## Review the workflow
 
 1. Start from the original snapshot: **15 open / 8 unassigned / 3 overdue / 72 articles**.
-2. Select **Review** in the queue banner, or open **Subscription feature claims spread** (SD-01), a critical unassigned issue 90 minutes overdue.
+2. Select **Review** in the queue banner, or open **Subscription feature claims spread** (WL-01), a critical unassigned issue 90 minutes overdue.
 3. Inspect the severity explanation and supporting coverage: three original stories, four articles, including one syndicated copy.
 4. Select a response owner and **Save owner**. Unassigned open issues becomes 7; status stays New.
 5. **Acknowledge** the issue. It remains open. Then **Resolve issue**: open becomes 14 and overdue becomes 2. Coverage remains 72 with all statuses selected.
@@ -55,7 +57,7 @@ See [data dictionary](docs/DATA.md) for fields and validation.
 
 ## Persistence, reset and limits
 
-Changes live in `localStorage` under `signal-desk:v1` on the current origin. They are **not shared team state** and send no email, alerts or external notifications. Different devices, browsers and deployment URLs have separate state. Concurrent tabs are not synchronized; the most recent save wins. Invalid saved state falls back to the seed with a recovery message. A failed save keeps changes in memory and offers **Retry save**. Reset requires confirmation.
+Changes live in `localStorage` under the deliberately retained `signal-desk:v1` key on the current origin. Existing saved ownership, status and activity remain compatible through the naming change; no second Watchlight key is created. They are **not shared team state** and send no email, alerts or external notifications. Different devices, browsers and deployment URLs have separate state. Concurrent tabs are not synchronized; the most recent save wins. Invalid saved state falls back to the seed with a recovery message. A failed save keeps changes in memory and offers **Retry save**. Reset requires confirmation.
 
 The prototype has no authentication, backend, live news feed, real recipients, or real organization data. Keyboard navigation, focus treatment, chart text summaries and reduced-motion support are included. Automated checks are Chromium-based and do not substitute for a full cross-browser or assistive-technology audit. MIT applies to original prototype code; dependencies retain their own licenses.
 
@@ -66,4 +68,6 @@ The prototype has no authentication, backend, live news feed, real recipients, o
 - [Data dictionary](docs/DATA.md)
 - [Verification evidence](docs/VERIFICATION.md)
 - [Vercel connection instructions](docs/DEPLOYMENT.md)
+- [Vesper integration and provenance](docs/VESPER.md)
+- [Learner-requirements audit](docs/REVIEW-READINESS.md)
 - [Agent instructions](AGENTS.md)
